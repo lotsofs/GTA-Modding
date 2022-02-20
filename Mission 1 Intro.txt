@@ -1,6 +1,3 @@
-//-------------Mission 1---------------
-// Originally: Intro
-
 :INTRO
 script_name 'INTRO' 
 $ONMISSION = 1  

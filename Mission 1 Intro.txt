@@ -3,8 +3,8 @@
 
 :INTRO
 script_name 'INTRO' 
-$ONMISSION = 1 // $ = int 
-$13 = 0 // $ = int 
+$ONMISSION = 1  
+$13 = 0  
 wait 0 
 fade 0 0 
 03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1 
@@ -43,11 +43,11 @@ if or
 823D:   not special_actor 5 loaded 
 jf @INTRO_369 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_362 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_362
 jump @INTRO_295 
@@ -60,11 +60,11 @@ if or
    not Model.Available(#CUTOBJ04)
 jf @INTRO_443 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_436 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_436
 jump @INTRO_369 
@@ -103,15 +103,15 @@ fade 1 2000
 
 :INTRO_725
 if 
-  1246 > $CUT_SCENE_TIME // int > $ 
+  1246 > $CUT_SCENE_TIME  
 jf @INTRO_792 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_785 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_785
 jump @INTRO_725 
@@ -121,15 +121,15 @@ jump @INTRO_725
 
 :INTRO_807
 if 
-  2708 > $CUT_SCENE_TIME // int > $ 
+  2708 > $CUT_SCENE_TIME  
 jf @INTRO_874 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_867 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_867
 jump @INTRO_807 
@@ -139,15 +139,15 @@ jump @INTRO_807
 
 :INTRO_889
 if 
-  4796 > $CUT_SCENE_TIME // int > $ 
+  4796 > $CUT_SCENE_TIME  
 jf @INTRO_956 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_949 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_949
 jump @INTRO_889 
@@ -157,15 +157,15 @@ jump @INTRO_889
 
 :INTRO_971
 if 
-  7086 > $CUT_SCENE_TIME // int > $ 
+  7086 > $CUT_SCENE_TIME  
 jf @INTRO_1038 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1031 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1031
 jump @INTRO_971 
@@ -175,15 +175,15 @@ jump @INTRO_971
 
 :INTRO_1053
 if 
-  8404 > $CUT_SCENE_TIME // int > $ 
+  8404 > $CUT_SCENE_TIME  
 jf @INTRO_1120 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1113 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1113
 jump @INTRO_1053 
@@ -193,15 +193,15 @@ jump @INTRO_1053
 
 :INTRO_1135
 if 
-  10756 > $CUT_SCENE_TIME // int > $ 
+  10756 > $CUT_SCENE_TIME  
 jf @INTRO_1202 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1195 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1195
 jump @INTRO_1135 
@@ -211,15 +211,15 @@ jump @INTRO_1135
 
 :INTRO_1217
 if 
-  12614 > $CUT_SCENE_TIME // int > $ 
+  12614 > $CUT_SCENE_TIME  
 jf @INTRO_1284 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1277 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1277
 jump @INTRO_1217 
@@ -229,15 +229,15 @@ jump @INTRO_1217
 
 :INTRO_1299
 if 
-  14813 > $CUT_SCENE_TIME // int > $ 
+  14813 > $CUT_SCENE_TIME  
 jf @INTRO_1366 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1359 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1359
 jump @INTRO_1299 
@@ -247,15 +247,15 @@ jump @INTRO_1299
 
 :INTRO_1381
 if 
-  18741 > $CUT_SCENE_TIME // int > $ 
+  18741 > $CUT_SCENE_TIME  
 jf @INTRO_1448 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1441 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1441
 jump @INTRO_1381 
@@ -265,15 +265,15 @@ jump @INTRO_1381
 
 :INTRO_1463
 if 
-  21294 > $CUT_SCENE_TIME // int > $ 
+  21294 > $CUT_SCENE_TIME  
 jf @INTRO_1530 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1523 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1523
 jump @INTRO_1463 
@@ -283,15 +283,15 @@ jump @INTRO_1463
 
 :INTRO_1545
 if 
-  24399 > $CUT_SCENE_TIME // int > $ 
+  24399 > $CUT_SCENE_TIME  
 jf @INTRO_1612 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1605 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1605
 jump @INTRO_1545 
@@ -301,15 +301,15 @@ jump @INTRO_1545
 
 :INTRO_1627
 if 
-  26496 > $CUT_SCENE_TIME // int > $ 
+  26496 > $CUT_SCENE_TIME  
 jf @INTRO_1694 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1687 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1687
 jump @INTRO_1627 
@@ -319,15 +319,15 @@ jump @INTRO_1627
 
 :INTRO_1709
 if 
-  31264 > $CUT_SCENE_TIME // int > $ 
+  31264 > $CUT_SCENE_TIME  
 jf @INTRO_1776 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1769 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1769
 jump @INTRO_1709 
@@ -337,15 +337,15 @@ jump @INTRO_1709
 
 :INTRO_1791
 if 
-  32904 > $CUT_SCENE_TIME // int > $ 
+  32904 > $CUT_SCENE_TIME  
 jf @INTRO_1860 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1853 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1853
 jump @INTRO_1791 
@@ -355,15 +355,15 @@ jump @INTRO_1791
 
 :INTRO_1875
 if 
-  35200 > $CUT_SCENE_TIME // int > $ 
+  35200 > $CUT_SCENE_TIME  
 jf @INTRO_1944 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_1937 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_1937
 jump @INTRO_1875 
@@ -373,15 +373,15 @@ jump @INTRO_1875
 
 :INTRO_1959
 if 
-  36522 > $CUT_SCENE_TIME // int > $ 
+  36522 > $CUT_SCENE_TIME  
 jf @INTRO_2028 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2021 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2021
 jump @INTRO_1959 
@@ -391,15 +391,15 @@ jump @INTRO_1959
 
 :INTRO_2043
 if 
-  41196 > $CUT_SCENE_TIME // int > $ 
+  41196 > $CUT_SCENE_TIME  
 jf @INTRO_2112 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2105 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2105
 jump @INTRO_2043 
@@ -409,15 +409,15 @@ jump @INTRO_2043
 
 :INTRO_2127
 if 
-  45232 > $CUT_SCENE_TIME // int > $ 
+  45232 > $CUT_SCENE_TIME  
 jf @INTRO_2196 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2189 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2189
 jump @INTRO_2127 
@@ -427,15 +427,15 @@ jump @INTRO_2127
 
 :INTRO_2211
 if 
-  48992 > $CUT_SCENE_TIME // int > $ 
+  48992 > $CUT_SCENE_TIME  
 jf @INTRO_2280 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2273 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2273
 jump @INTRO_2211 
@@ -445,15 +445,15 @@ jump @INTRO_2211
 
 :INTRO_2295
 if 
-  50206 > $CUT_SCENE_TIME // int > $ 
+  50206 > $CUT_SCENE_TIME  
 jf @INTRO_2364 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2357 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2357
 jump @INTRO_2295 
@@ -463,15 +463,15 @@ jump @INTRO_2295
 
 :INTRO_2379
 if 
-  52509 > $CUT_SCENE_TIME // int > $ 
+  52509 > $CUT_SCENE_TIME  
 jf @INTRO_2448 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2441 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2441
 jump @INTRO_2379 
@@ -481,15 +481,15 @@ jump @INTRO_2379
 
 :INTRO_2463
 if 
-  54340 > $CUT_SCENE_TIME // int > $ 
+  54340 > $CUT_SCENE_TIME  
 jf @INTRO_2532 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2525 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2525
 jump @INTRO_2463 
@@ -499,15 +499,15 @@ jump @INTRO_2463
 
 :INTRO_2547
 if 
-  56291 > $CUT_SCENE_TIME // int > $ 
+  56291 > $CUT_SCENE_TIME  
 jf @INTRO_2616 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2609 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2609
 jump @INTRO_2547 
@@ -517,15 +517,15 @@ jump @INTRO_2547
 
 :INTRO_2631
 if 
-  57900 > $CUT_SCENE_TIME // int > $ 
+  57900 > $CUT_SCENE_TIME  
 jf @INTRO_2700 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2693 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2693
 jump @INTRO_2631 
@@ -535,15 +535,15 @@ jump @INTRO_2631
 
 :INTRO_2715
 if 
-  61168 > $CUT_SCENE_TIME // int > $ 
+  61168 > $CUT_SCENE_TIME  
 jf @INTRO_2784 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2777 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2777
 jump @INTRO_2715 
@@ -553,15 +553,15 @@ jump @INTRO_2715
 
 :INTRO_2799
 if 
-  62518 > $CUT_SCENE_TIME // int > $ 
+  62518 > $CUT_SCENE_TIME  
 jf @INTRO_2868 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2861 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2861
 jump @INTRO_2799 
@@ -571,15 +571,15 @@ jump @INTRO_2799
 
 :INTRO_2883
 if 
-  64169 > $CUT_SCENE_TIME // int > $ 
+  64169 > $CUT_SCENE_TIME  
 jf @INTRO_2952 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_2945 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_2945
 jump @INTRO_2883 
@@ -589,15 +589,15 @@ jump @INTRO_2883
 
 :INTRO_2967
 if 
-  65706 > $CUT_SCENE_TIME // int > $ 
+  65706 > $CUT_SCENE_TIME  
 jf @INTRO_3036 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_3029 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_3029
 jump @INTRO_2967 
@@ -607,15 +607,15 @@ jump @INTRO_2967
 
 :INTRO_3051
 if 
-  66784 > $CUT_SCENE_TIME // int > $ 
+  66784 > $CUT_SCENE_TIME  
 jf @INTRO_3120 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_3113 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_3113
 jump @INTRO_3051 
@@ -625,15 +625,15 @@ jump @INTRO_3051
 
 :INTRO_3122
 if 
-  68240 > $CUT_SCENE_TIME // int > $ 
+  68240 > $CUT_SCENE_TIME  
 jf @INTRO_3191 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_3184 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_3184
 jump @INTRO_3122 
@@ -648,11 +648,11 @@ if
 fading 
 jf @INTRO_3264 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_3257 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_3257
 jump @INTRO_3208 
@@ -703,11 +703,11 @@ if or
    not Model.Available(#CUTOBJ02)
 jf @INTRO_3615 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_3608 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_3608
 jump @INTRO_3535 
@@ -719,11 +719,11 @@ if or
    not Model.Available(#VEG_PALM04)
 jf @INTRO_3682 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_3675 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_3675
 jump @INTRO_3615 
@@ -759,15 +759,15 @@ fade 1 3000
 
 :INTRO_3971
 if 
-  4860 > $CUT_SCENE_TIME // int > $ 
+  4860 > $CUT_SCENE_TIME  
 jf @INTRO_4038 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4031 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4031
 jump @INTRO_3971 
@@ -777,15 +777,15 @@ jump @INTRO_3971
 
 :INTRO_4053
 if 
-  6400 > $CUT_SCENE_TIME // int > $ 
+  6400 > $CUT_SCENE_TIME  
 jf @INTRO_4120 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4113 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4113
 jump @INTRO_4053 
@@ -795,15 +795,15 @@ jump @INTRO_4053
 
 :INTRO_4127
 if 
-  9600 > $CUT_SCENE_TIME // int > $ 
+  9600 > $CUT_SCENE_TIME  
 jf @INTRO_4194 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4187 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4187
 jump @INTRO_4127 
@@ -813,15 +813,15 @@ jump @INTRO_4127
 
 :INTRO_4209
 if 
-  12342 > $CUT_SCENE_TIME // int > $ 
+  12342 > $CUT_SCENE_TIME  
 jf @INTRO_4276 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4269 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4269
 jump @INTRO_4209 
@@ -831,15 +831,15 @@ jump @INTRO_4209
 
 :INTRO_4291
 if 
-  15840 > $CUT_SCENE_TIME // int > $ 
+  15840 > $CUT_SCENE_TIME  
 jf @INTRO_4358 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4351 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4351
 jump @INTRO_4291 
@@ -849,15 +849,15 @@ jump @INTRO_4291
 
 :INTRO_4373
 if 
-  17556 > $CUT_SCENE_TIME // int > $ 
+  17556 > $CUT_SCENE_TIME  
 jf @INTRO_4440 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4433 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4433
 jump @INTRO_4373 
@@ -867,15 +867,15 @@ jump @INTRO_4373
 
 :INTRO_4455
 if 
-  20640 > $CUT_SCENE_TIME // int > $ 
+  20640 > $CUT_SCENE_TIME  
 jf @INTRO_4522 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4515 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4515
 jump @INTRO_4455 
@@ -885,15 +885,15 @@ jump @INTRO_4455
 
 :INTRO_4537
 if 
-  23018 > $CUT_SCENE_TIME // int > $ 
+  23018 > $CUT_SCENE_TIME  
 jf @INTRO_4604 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4597 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4597
 jump @INTRO_4537 
@@ -903,15 +903,15 @@ jump @INTRO_4537
 
 :INTRO_4619
 if 
-  25863 > $CUT_SCENE_TIME // int > $ 
+  25863 > $CUT_SCENE_TIME  
 jf @INTRO_4686 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4679 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4679
 jump @INTRO_4619 
@@ -921,30 +921,30 @@ jump @INTRO_4619
 
 :INTRO_4701
 if 
-  26000 > $CUT_SCENE_TIME // int > $ 
+  26000 > $CUT_SCENE_TIME  
 jf @INTRO_4768 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4761 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4761
 jump @INTRO_4701 
 
 :INTRO_4768
 if 
-  27624 > $CUT_SCENE_TIME // int > $ 
+  27624 > $CUT_SCENE_TIME  
 jf @INTRO_4835 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4828 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4828
 jump @INTRO_4768 
@@ -954,15 +954,15 @@ jump @INTRO_4768
 
 :INTRO_4850
 if 
-  29348 > $CUT_SCENE_TIME // int > $ 
+  29348 > $CUT_SCENE_TIME  
 jf @INTRO_4917 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4910 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4910
 jump @INTRO_4850 
@@ -972,15 +972,15 @@ jump @INTRO_4850
 
 :INTRO_4932
 if 
-  30300 > $CUT_SCENE_TIME // int > $ 
+  30300 > $CUT_SCENE_TIME  
 jf @INTRO_4999 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_4992 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_4992
 jump @INTRO_4932 
@@ -997,16 +997,16 @@ jf @INTRO_5100
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
 if 
-  $CUT_SCENE_TIME >= 33300 // $ >= int 
+  $CUT_SCENE_TIME >= 33300  
 jf @INTRO_5061 
 00BE: text_clear_all 
 
 :INTRO_5061
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_5093 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_5093
 jump @INTRO_5016 
@@ -1060,11 +1060,11 @@ if or
 823D:   not special_actor 6 loaded 
 jf @INTRO_5475 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_5468 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_5468
 jump @INTRO_5397 
@@ -1079,11 +1079,11 @@ if or
    not Model.Available(#CUTOBJ04)
 jf @INTRO_5557 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_5550 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_5550
 jump @INTRO_5475 
@@ -1095,11 +1095,11 @@ if or
    not Model.Available(#DOCKFUEL07)
 jf @INTRO_5623 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_5616 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_5616
 jump @INTRO_5557 
@@ -1142,15 +1142,15 @@ fade 1 2000
 
 :INTRO_5952
 if 
-  6500 > $CUT_SCENE_TIME // int > $ 
+  6500 > $CUT_SCENE_TIME  
 jf @INTRO_6019 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6012 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6012
 jump @INTRO_5952 
@@ -1160,15 +1160,15 @@ jump @INTRO_5952
 
 :INTRO_6031
 if 
-  8743 > $CUT_SCENE_TIME // int > $ 
+  8743 > $CUT_SCENE_TIME  
 jf @INTRO_6110 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6091 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6091
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1180,15 +1180,15 @@ jump @INTRO_6031
 
 :INTRO_6137
 if 
-  10784 > $CUT_SCENE_TIME // int > $ 
+  10784 > $CUT_SCENE_TIME  
 jf @INTRO_6216 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6197 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6197
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1200,15 +1200,15 @@ jump @INTRO_6137
 
 :INTRO_6243
 if 
-  12040 > $CUT_SCENE_TIME // int > $ 
+  12040 > $CUT_SCENE_TIME  
 jf @INTRO_6322 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6303 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6303
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1220,15 +1220,15 @@ jump @INTRO_6243
 
 :INTRO_6349
 if 
-  14488 > $CUT_SCENE_TIME // int > $ 
+  14488 > $CUT_SCENE_TIME  
 jf @INTRO_6428 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6409 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6409
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1240,15 +1240,15 @@ jump @INTRO_6349
 
 :INTRO_6455
 if 
-  17072 > $CUT_SCENE_TIME // int > $ 
+  17072 > $CUT_SCENE_TIME  
 jf @INTRO_6534 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6515 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6515
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1260,15 +1260,15 @@ jump @INTRO_6455
 
 :INTRO_6556
 if 
-  20384 > $CUT_SCENE_TIME // int > $ 
+  20384 > $CUT_SCENE_TIME  
 jf @INTRO_6635 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6616 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6616
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1279,15 +1279,15 @@ jump @INTRO_6556
 
 :INTRO_6647
 if 
-  23200 > $CUT_SCENE_TIME // int > $ 
+  23200 > $CUT_SCENE_TIME  
 jf @INTRO_6726 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6707 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6707
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1298,15 +1298,15 @@ jump @INTRO_6647
 
 :INTRO_6738
 if 
-  35596 > $CUT_SCENE_TIME // int > $ 
+  35596 > $CUT_SCENE_TIME  
 jf @INTRO_6819 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6800 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6800
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1318,15 +1318,15 @@ jump @INTRO_6738
 
 :INTRO_6846
 if 
-  36430 > $CUT_SCENE_TIME // int > $ 
+  36430 > $CUT_SCENE_TIME  
 jf @INTRO_6927 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_6908 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_6908
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1338,15 +1338,15 @@ jump @INTRO_6846
 
 :INTRO_6954
 if 
-  39824 > $CUT_SCENE_TIME // int > $ 
+  39824 > $CUT_SCENE_TIME  
 jf @INTRO_7035 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_7016 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_7016
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1358,15 +1358,15 @@ jump @INTRO_6954
 
 :INTRO_7062
 if 
-  40896 > $CUT_SCENE_TIME // int > $ 
+  40896 > $CUT_SCENE_TIME  
 jf @INTRO_7143 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_7124 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_7124
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1378,15 +1378,15 @@ jump @INTRO_7062
 
 :INTRO_7170
 if 
-  42518 > $CUT_SCENE_TIME // int > $ 
+  42518 > $CUT_SCENE_TIME  
 jf @INTRO_7251 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_7232 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_7232
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1398,15 +1398,15 @@ jump @INTRO_7170
 
 :INTRO_7278
 if 
-  46872 > $CUT_SCENE_TIME // int > $ 
+  46872 > $CUT_SCENE_TIME  
 jf @INTRO_7359 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_7340 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_7340
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1418,15 +1418,15 @@ jump @INTRO_7278
 
 :INTRO_7386
 if 
-  51100 > $CUT_SCENE_TIME // int > $ 
+  51100 > $CUT_SCENE_TIME  
 jf @INTRO_7455 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_7448 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_7448
 jump @INTRO_7386 
@@ -1442,15 +1442,15 @@ jf @INTRO_7500
 
 :INTRO_7512
 if 
-  51233 > $CUT_SCENE_TIME // int > $ 
+  51233 > $CUT_SCENE_TIME  
 jf @INTRO_7593 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_7574 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_7574
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1467,15 +1467,15 @@ jf @INTRO_7638
 
 :INTRO_7650
 if 
-  51366 > $CUT_SCENE_TIME // int > $ 
+  51366 > $CUT_SCENE_TIME  
 jf @INTRO_7731 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_7712 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_7712
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1492,15 +1492,15 @@ jf @INTRO_7776
 
 :INTRO_7788
 if 
-  51500 > $CUT_SCENE_TIME // int > $ 
+  51500 > $CUT_SCENE_TIME  
 jf @INTRO_7869 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_7850 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_7850
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1518,15 +1518,15 @@ jf @INTRO_7946
 
 :INTRO_7958
 if 
-  51633 > $CUT_SCENE_TIME // int > $ 
+  51633 > $CUT_SCENE_TIME  
 jf @INTRO_8039 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_8020 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_8020
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1543,15 +1543,15 @@ jf @INTRO_8084
 
 :INTRO_8096
 if 
-  51733 > $CUT_SCENE_TIME // int > $ 
+  51733 > $CUT_SCENE_TIME  
 jf @INTRO_8177 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_8158 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_8158
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1568,15 +1568,15 @@ jf @INTRO_8222
 
 :INTRO_8234
 if 
-  51766 > $CUT_SCENE_TIME // int > $ 
+  51766 > $CUT_SCENE_TIME  
 jf @INTRO_8315 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_8296 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_8296
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1593,15 +1593,15 @@ jf @INTRO_8360
 
 :INTRO_8372
 if 
-  51900 > $CUT_SCENE_TIME // int > $ 
+  51900 > $CUT_SCENE_TIME  
 jf @INTRO_8453 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_8434 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_8434
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1618,15 +1618,15 @@ jf @INTRO_8498
 
 :INTRO_8510
 if 
-  51966 > $CUT_SCENE_TIME // int > $ 
+  51966 > $CUT_SCENE_TIME  
 jf @INTRO_8591 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_8572 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_8572
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1643,15 +1643,15 @@ jf @INTRO_8636
 
 :INTRO_8648
 if 
-  52033 > $CUT_SCENE_TIME // int > $ 
+  52033 > $CUT_SCENE_TIME  
 jf @INTRO_8729 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_8710 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_8710
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1669,15 +1669,15 @@ jf @INTRO_8806
 
 :INTRO_8818
 if 
-  52166 > $CUT_SCENE_TIME // int > $ 
+  52166 > $CUT_SCENE_TIME  
 jf @INTRO_8899 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_8880 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_8880
 0598: stir_ground_around_object $148 radius 10.0 density 4 
@@ -1694,15 +1694,15 @@ jf @INTRO_8944
 
 :INTRO_8956
 if 
-  52200 > $CUT_SCENE_TIME // int > $ 
+  52200 > $CUT_SCENE_TIME  
 jf @INTRO_9037 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_9018 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_9018
 0598: stir_ground_around_object $148 radius 10.0 density 6 
@@ -1719,15 +1719,15 @@ jf @INTRO_9082
 
 :INTRO_9094
 if 
-  52256 > $CUT_SCENE_TIME // int > $ 
+  52256 > $CUT_SCENE_TIME  
 jf @INTRO_9175 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_9156 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_9156
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1739,15 +1739,15 @@ jump @INTRO_9094
 
 :INTRO_9202
 if 
-  52300 > $CUT_SCENE_TIME // int > $ 
+  52300 > $CUT_SCENE_TIME  
 jf @INTRO_9283 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_9264 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_9264
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1764,15 +1764,15 @@ jf @INTRO_9328
 
 :INTRO_9340
 if 
-  52433 > $CUT_SCENE_TIME // int > $ 
+  52433 > $CUT_SCENE_TIME  
 jf @INTRO_9421 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_9402 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_9402
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1790,15 +1790,15 @@ jf @INTRO_9498
 
 :INTRO_9510
 if 
-  52566 > $CUT_SCENE_TIME // int > $ 
+  52566 > $CUT_SCENE_TIME  
 jf @INTRO_9591 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_9572 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_9572
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1815,15 +1815,15 @@ jf @INTRO_9636
 
 :INTRO_9648
 if 
-  52666 > $CUT_SCENE_TIME // int > $ 
+  52666 > $CUT_SCENE_TIME  
 jf @INTRO_9729 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_9710 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_9710
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1840,15 +1840,15 @@ jf @INTRO_9774
 
 :INTRO_9786
 if 
-  52700 > $CUT_SCENE_TIME // int > $ 
+  52700 > $CUT_SCENE_TIME  
 jf @INTRO_9867 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_9848 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_9848
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1865,15 +1865,15 @@ jf @INTRO_9912
 
 :INTRO_9924
 if 
-  52833 > $CUT_SCENE_TIME // int > $ 
+  52833 > $CUT_SCENE_TIME  
 jf @INTRO_10005 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_9986 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_9986
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1890,15 +1890,15 @@ jf @INTRO_10050
 
 :INTRO_10062
 if 
-  52900 > $CUT_SCENE_TIME // int > $ 
+  52900 > $CUT_SCENE_TIME  
 jf @INTRO_10143 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_10124 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_10124
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1915,15 +1915,15 @@ jf @INTRO_10188
 
 :INTRO_10200
 if 
-  52966 > $CUT_SCENE_TIME // int > $ 
+  52966 > $CUT_SCENE_TIME  
 jf @INTRO_10281 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_10262 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_10262
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1940,15 +1940,15 @@ jf @INTRO_10326
 
 :INTRO_10338
 if 
-  53100 > $CUT_SCENE_TIME // int > $ 
+  53100 > $CUT_SCENE_TIME  
 jf @INTRO_10419 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_10400 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_10400
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1965,15 +1965,15 @@ jf @INTRO_10464
 
 :INTRO_10476
 if 
-  53133 > $CUT_SCENE_TIME // int > $ 
+  53133 > $CUT_SCENE_TIME  
 jf @INTRO_10557 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_10538 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_10538
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -1990,15 +1990,15 @@ jf @INTRO_10602
 
 :INTRO_10614
 if 
-  53233 > $CUT_SCENE_TIME // int > $ 
+  53233 > $CUT_SCENE_TIME  
 jf @INTRO_10695 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_10676 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_10676
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -2015,15 +2015,15 @@ jf @INTRO_10740
 
 :INTRO_10752
 if 
-  53366 > $CUT_SCENE_TIME // int > $ 
+  53366 > $CUT_SCENE_TIME  
 jf @INTRO_10833 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_10814 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_10814
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -2042,15 +2042,15 @@ jf @INTRO_10942
 
 :INTRO_10954
 if 
-  53500 > $CUT_SCENE_TIME // int > $ 
+  53500 > $CUT_SCENE_TIME  
 jf @INTRO_11035 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_11016 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_11016
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -2067,15 +2067,15 @@ jf @INTRO_11080
 
 :INTRO_11092
 if 
-  57000 > $CUT_SCENE_TIME // int > $ 
+  57000 > $CUT_SCENE_TIME  
 jf @INTRO_11173 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_11154 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_11154
 0598: stir_ground_around_object $148 radius 10.0 density 8 
@@ -2083,15 +2083,15 @@ jump @INTRO_11092
 
 :INTRO_11173
 if 
-  58736 > $CUT_SCENE_TIME // int > $ 
+  58736 > $CUT_SCENE_TIME  
 jf @INTRO_11242 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_11235 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_11235
 jump @INTRO_11173 
@@ -2101,15 +2101,15 @@ jump @INTRO_11173
 
 :INTRO_11257
 if 
-  60800 > $CUT_SCENE_TIME // int > $ 
+  60800 > $CUT_SCENE_TIME  
 jf @INTRO_11326 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_11319 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_11319
 jump @INTRO_11257 
@@ -2119,15 +2119,15 @@ jump @INTRO_11257
 
 :INTRO_11328
 if 
-  63212 > $CUT_SCENE_TIME // int > $ 
+  63212 > $CUT_SCENE_TIME  
 jf @INTRO_11397 
 wait 0 
 02E8: $CUT_SCENE_TIME = cutscenetime 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_11390 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_11390
 jump @INTRO_11328 
@@ -2141,11 +2141,11 @@ if
 fading 
 jf @INTRO_11468 
 wait 0 
-gosub @INTRO_14443 
+gosub @INTRO_cutsceneskip 
 if 
-  $13 == 2 // $ == int 
+  $13 == 2  
 jf @INTRO_11461 
-jump @INTRO_11542 
+jump @INTRO_4_start 
 
 :INTRO_11461
 jump @INTRO_11412 
@@ -2170,23 +2170,24 @@ Model.Destroy(#DOC_CRANE_CAB04)
 Model.Destroy(#DOCKFUEL07)
 wait 0 
 
-:INTRO_11542
+:INTRO_4_start
 044D: load_splash 'INTRO4' 
 0169: set_fade_color 2 2 2 
 if 
-  $13 == 2 // $ == int 
-jf @INTRO_11611 
+  $13 == 2  
+jf @INTRO_4_setup 
 fade 0 1000 
 00BE: text_clear_all 
 
 :INTRO_4_waitforfade
 if 
 fading 
-jf @INTRO_11611 
+jf @INTRO_4_setup 
 wait 0 
 jump @INTRO_4_waitforfade 
 
-:INTRO_11611
+:INTRO_4_setup
+$13 = 0
 01B7: release_weather 
 00C0: set_current_time 21 0 
 02EA: end_cutscene 
@@ -2228,10 +2229,10 @@ Model.Destroy(#VEG_PALM04)
 wait 0 
 01B7: release_weather 
 00C0: set_current_time 21 0 
-3@ = 0 // @ = int 
-4@ = 0 // @ = int 
-5@ = 0 // @ = int 
-6@ = 0 // @ = int 
+3@ = 0  
+4@ = 0  
+5@ = 0  
+6@ = 0  
 02A3: enable_widescreen 1 
 Player.CanMove($PLAYER_CHAR, False)
 01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1 
@@ -2239,30 +2240,30 @@ Player.CanMove($PLAYER_CHAR, False)
 03CF: load_wav 'INTRO1' as 1 
 03CF: load_wav 'INTRO2' as 2 
 
-:INTRO_11899
+:INTRO_4_waitforloadaudio
 if or
 83D0:   not wav 1 loaded 
 83D0:   not wav 2 loaded 
-jf @INTRO_11929 
+jf @INTRO_4_setup2 
 wait 0 
-jump @INTRO_11899 
+jump @INTRO_4_waitforloadaudio 
 
-:INTRO_11929
+:INTRO_4_setup2
 Model.Load(#ADMIRAL)
 Model.Load(#FAGGIO)
 023C: load_special_actor 10 'IGKEN' 
 038B: load_requested_models 
 
-:INTRO_11953
+:INTRO_4_waitforloadmodels
 if or
    not Model.Available(#ADMIRAL)
    not Model.Available(#FAGGIO)
 823D:   not special_actor 10 loaded 
-jf @INTRO_11989 
+jf @INTRO_4_setup3 
 wait 0 
-jump @INTRO_11953 
+jump @INTRO_4_waitforloadmodels 
 
-:INTRO_11989
+:INTRO_4_setup3
 0395: clear_area 0 at 114.2 -823.3 9.7 range 1.0 
 04E4: request_collision_at 86.428 -852.238 
 Camera.SetAtPos(114.2, -823.3, 9.7)
@@ -2286,356 +2287,309 @@ Car.Angle(1@) = 250.6
 Model.Destroy(#ADMIRAL)
 Model.Destroy(#FAGGIO)
 
-:INTRO_12275
+:INTRO_4_waitforplayertoentercar
 if 
    not Actor.Driving($PLAYER_ACTOR)
-jf @INTRO_12318 
+jf @INTRO_4_startcutscene 
 wait 0 
-if 
-   Car.Wrecked(0@)
-jf @INTRO_12311 
+jump @INTRO_4_waitforplayertoentercar 
 
-:INTRO_12311
-jump @INTRO_12275 
-
-:INTRO_12318
+:INTRO_4_startcutscene
 fade 1 1000 
 0395: clear_area 1 at 116.583 -796.821 11.423 range 1.0 
 Camera.SetPosition(116.583, -796.821, 11.423, 0.0, 0.0, 0.0)
 Camera.PointAt(116.573, -797.821, 11.414, 2)
 if 
    not Car.Wrecked(0@)
-jf @INTRO_12470 
+jf @INTRO_4_resetdialoguetimers 
 04BA: set_car 0@ speed_instantly 20.0 
 Car.DriveTo(0@, 103.1, -832.3, 9.317)
 Car.SetMaxSpeed(0@, 30.0)
 00AE: set_vehicle 0@ traffic_behavior_to 2 
-4@ = 1 // @ = int 
+4@ = 1  
 
-:INTRO_12470
-TIMERA = 0 // @ = int 
-TIMERB = 0 // @ = int 
+:INTRO_4_resetdialoguetimers
+TIMERA = 0  
+TIMERB = 0  
 
-:INTRO_12484
+:INTRO_4_checkdialogueprogress
 if or
-   not 3@ == 8 // @ == int 
-   not 4@ == 4 // @ == int 
-jf @INTRO_13565 
+   not 3@ == 8  // all required dialogues played
+   not 4@ == 4  // car has arrived
+jf @INTRO_4_carparked 
 wait 0 
 if 
    Car.Wrecked(0@)
-jf @INTRO_12536 
-jump @INTRO_12964 
+jf @INTRO_4_carstuckfailsafe 
+jump @INTRO_4_dialoguestart_pokehead 
 
-:INTRO_12536
+:INTRO_4_carstuckfailsafe
 if 
-  4@ == 1 // @ == int 
-jf @INTRO_12674 
+  4@ == 1  
+jf @INTRO_4_cardriveto1 
 if 
-  TIMERB >= 30000 // @ >= int 
-jf @INTRO_12674 
+  TIMERB >= 30000  
+jf @INTRO_4_cardriveto1 
 if 
    not Car.Wrecked(0@)
-jf @INTRO_12674 
+jf @INTRO_4_cardriveto1 
 if 
 81AF:   not car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0 
-jf @INTRO_12674 
-4@ = 3 // @ = int 
+jf @INTRO_4_cardriveto1 
+4@ = 3  
 Car.PutAt(0@, 132.6, -818.278, 9.446)
 Car.Angle(0@) = 206.0214
 
-:INTRO_12674
+:INTRO_4_cardriveto1
 if 
-  4@ == 1 // @ == int 
-jf @INTRO_12767 
+  4@ == 1  
+jf @INTRO_4_cardriveto2 
 if 
 01AF:   car 0@ 0 103.1 -832.3 9.317 radius 4.0 4.0 4.0 
-jf @INTRO_12767 
+jf @INTRO_4_cardriveto2 
 Car.DriveTo(0@, 113.371, -819.078, 9.317)
-4@ = 2 // @ = int 
+4@ = 2  
 
-:INTRO_12767
+:INTRO_4_cardriveto2
 if 
-  4@ == 2 // @ == int 
-jf @INTRO_12860 
+  4@ == 2  
+jf @INTRO_4_cardriveto3 
 if 
 01AF:   car 0@ 0 113.371 -819.078 9.317 radius 4.0 4.0 4.0 
-jf @INTRO_12860 
+jf @INTRO_4_cardriveto3 
 Car.DriveTo(0@, 132.6, -818.278, 9.446)
-4@ = 3 // @ = int 
+4@ = 3  
 
-:INTRO_12860
+:INTRO_4_cardriveto3
 if 
-  4@ == 3 // @ == int 
-jf @INTRO_12964 
+  4@ == 3  
+jf @INTRO_4_dialoguestart_pokehead 
 if 
 01AF:   car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0 
-jf @INTRO_12964 
+jf @INTRO_4_dialoguestart_pokehead 
 if 
    not Car.Wrecked(0@)
-jf @INTRO_12964 
+jf @INTRO_4_dialoguestart_pokehead 
 Car.SetMaxSpeed(0@, 0.0)
 Car.SetToNormalDriver(0@)
-4@ = 4 // @ = int 
+4@ = 4  
 
-:INTRO_12964
+:INTRO_4_dialoguestart_pokehead
 if 
-   Actor.Dead(2@)
-jf @INTRO_12980 
-
-:INTRO_12980
-if 
-  3@ == 0 // @ == int 
-jf @INTRO_13038 
+  3@ == 0  
+jf @INTRO_4_changedialoguecameraangle 
 03D1: play_wav 1 
 00BC: text_highpriority 'INTRO1' time 10000 1  // I poke my head out of the gutter for one freakin' second and fate shovels shit in my face!
-TIMERA = 0 // @ = int 
-TIMERB = 0 // @ = int 
-3@ = 1 // @ = int 
+TIMERA = 0  
+TIMERB = 0  
+3@ = 1  
 
-:INTRO_13038
+:INTRO_4_changedialoguecameraangle
 if 
-  6@ == 0 // @ == int 
-jf @INTRO_13164 
+  6@ == 0  
+jf @INTRO_4_dialoguestart_getsleep 
 if 
-  TIMERB >= 2000 // @ >= int 
-jf @INTRO_13164 
+  TIMERB >= 2000  
+jf @INTRO_4_dialoguestart_getsleep 
 0395: clear_area 0 at 104.88 -808.433 12.108 range 1.0 
 Camera.SetPosition(104.88, -808.433, 12.108, 0.0, 0.0, 0.0)
 Camera.PointAt(105.771, -808.888, 12.091, 2)
-TIMERB = 0 // @ = int 
-6@ = 1 // @ = int 
+TIMERB = 0  
+6@ = 1  
 
-:INTRO_13164
+:INTRO_4_dialoguestart_getsleep
 if 
-  3@ == 1 // @ == int 
-jf @INTRO_13252 
+  3@ == 1  
+jf @INTRO_4_loadnextaudiofile1 
 if 
 03D2:   wav 1 ended 
-jf @INTRO_13252 
+jf @INTRO_4_loadnextaudiofile1 
 03D5: remove_text 'INTRO1'  // I poke my head out of the gutter for one freakin' second and fate shovels shit in my face!
 if 
-  TIMERA >= 1000 // @ >= int 
-jf @INTRO_13252 
+  TIMERA >= 1000  
+jf @INTRO_4_loadnextaudiofile1 
 03D1: play_wav 2 
 00BC: text_highpriority 'INTRO2' time 10000 1  // Go get some sleep.
-3@ = 2 // @ = int 
+3@ = 2  
 
-:INTRO_13252
+:INTRO_4_loadnextaudiofile1
 if 
-  3@ == 2 // @ == int 
-jf @INTRO_13289 
+  3@ == 2  
+jf @INTRO_4_dialoguestop_getsleep 
 03CF: load_wav 'INTRO3' as 1 
-3@ = 3 // @ = int 
+3@ = 3  
 
-:INTRO_13289
+:INTRO_4_dialoguestop_getsleep
 if 
-  3@ == 3 // @ == int 
-jf @INTRO_13339 
+  3@ == 3  
+jf @INTRO_4_loadnextaudiofile2 
 if 
 03D2:   wav 2 ended 
-jf @INTRO_13339 
+jf @INTRO_4_loadnextaudiofile2 
 03D5: remove_text 'INTRO2'  // Go get some sleep.
-3@ = 4 // @ = int 
+3@ = 4  
 
-:INTRO_13339
+:INTRO_4_loadnextaudiofile2
 if 
-  3@ == 4 // @ == int 
-jf @INTRO_13398 
+  3@ == 4  
+jf @INTRO_4_dialoguestart_whatgonna 
 if 
 03D0:   wav 1 loaded 
-jf @INTRO_13398 
+jf @INTRO_4_dialoguestart_whatgonna 
 03CF: load_wav 'INTRO4' as 2 
-TIMERA = 0 // @ = int 
-3@ = 5 // @ = int 
+TIMERA = 0  
+3@ = 5  
 
-:INTRO_13398
+:INTRO_4_dialoguestart_whatgonna
 if 
-  3@ == 5 // @ == int 
-jf @INTRO_13461 
+  3@ == 5  
+jf @INTRO_4_dialoguestop_whatgonna 
 if 
-  TIMERA >= 900 // @ >= int 
-jf @INTRO_13461 
+  TIMERA >= 900  
+jf @INTRO_4_dialoguestop_whatgonna 
 03D1: play_wav 1 
 00BC: text_highpriority 'INTRO3' time 10000 1  // What are you gonna do?
-3@ = 6 // @ = int 
+3@ = 6  
 
-:INTRO_13461
+:INTRO_4_dialoguestop_whatgonna
 if 
-  3@ == 6 // @ == int 
-jf @INTRO_13511 
+  3@ == 6  
+jf @INTRO_4_dialoguedone 
 if 
 03D2:   wav 1 ended 
-jf @INTRO_13511 
+jf @INTRO_4_dialoguedone 
 03D5: remove_text 'INTRO3'  // What are you gonna do?
-3@ = 7 // @ = int 
+3@ = 7  
 
-:INTRO_13511
+:INTRO_4_dialoguedone
 if 
-  3@ == 7 // @ == int 
-jf @INTRO_13558 
+  3@ == 7  
+jf @INTRO_4_checkdialogueprogressjump 
 if 
 03D0:   wav 2 loaded 
-jf @INTRO_13558 
-TIMERA = 0 // @ = int 
-3@ = 8 // @ = int 
+jf @INTRO_4_checkdialogueprogressjump 
+TIMERA = 0  
+3@ = 8  
 
-:INTRO_13558
-jump @INTRO_12484 
+:INTRO_4_checkdialogueprogressjump
+jump @INTRO_4_checkdialogueprogress 
 
-:INTRO_13565
+:INTRO_4_carparked
+gosub @INTRO_4_cutsceneskip
+if
+  $13 == 0
+jf @INTRO_4_moveplayer
 if 
-  300 > TIMERA // int > @ 
-jf @INTRO_13627 
+  300 > TIMERA  
+jf @INTRO_4_dialoguestart_dropby 
 wait 0 
-if 
-   Car.Wrecked(0@)
-jf @INTRO_13604 
+jump @INTRO_4_carparked 
 
-:INTRO_13604
-if 
-   Actor.Dead(2@)
-jf @INTRO_13620 
-
-:INTRO_13620
-jump @INTRO_13565 
-
-:INTRO_13627
+:INTRO_4_dialoguestart_dropby
 03D1: play_wav 2 
 00BC: text_highpriority 'INTRO4' time 10000 1  // I'll drop by your office tomorrow and we can start sorting this mess out.
 wait 400 
-if 
-   Car.Wrecked(0@)
-jf @INTRO_13667 
 
-:INTRO_13667
-if 
-   Actor.Dead(2@)
-jf @INTRO_13683 
-
-:INTRO_13683
+:INTRO_4_dialoguewait_dropby
+gosub @INTRO_4_cutsceneskip
+if
+  $13 == 0
+jf @INTRO_4_moveplayer
 if 
 83D2:   not wav 2 ended 
-jf @INTRO_13741 
+jf @INTRO_4_kenexitcar 
 wait 0 
-if 
-   Car.Wrecked(0@)
-jf @INTRO_13718 
+jump @INTRO_4_dialoguewait_dropby 
 
-:INTRO_13718
-if 
-   Actor.Dead(2@)
-jf @INTRO_13734 
-
-:INTRO_13734
-jump @INTRO_13683 
-
-:INTRO_13741
+:INTRO_4_kenexitcar
 03D5: remove_text 'INTRO4'  // I'll drop by your office tomorrow and we can start sorting this mess out.
 if 
    not Car.Wrecked(0@)
-jf @INTRO_13791 
+jf @INTRO_4_waitforkenexitcar 
 if 
    not Actor.Dead(2@)
-jf @INTRO_13791 
+jf @INTRO_4_waitforkenexitcar 
 01D3: actor 2@ leave_car 0@ 
 
-:INTRO_13791
+:INTRO_4_waitforkenexitcar
+gosub @INTRO_4_cutsceneskip
+if
+  $13 == 0
+jf @INTRO_4_moveplayer
 if 
    not Actor.Dead(2@)
-jf @INTRO_13866 
-
-:INTRO_13807
+jf @INTRO_4_kenrunto1 
 if 
    Actor.Driving(2@)
-jf @INTRO_13866 
+jf @INTRO_4_kenrunto1 
 wait 0 
-if 
-   Car.Wrecked(0@)
-jf @INTRO_13843 
+jump @INTRO_4_waitforkenexitcar 
 
-:INTRO_13843
-if 
-   Actor.Dead(2@)
-jf @INTRO_13859 
-
-:INTRO_13859
-jump @INTRO_13807 
-
-:INTRO_13866
+:INTRO_4_kenrunto1
 if 
    not Actor.Dead(2@)
-jf @INTRO_13904 
+jf @INTRO_4_resettimer1 
 0211: actor 2@ walk_to 125.809 -815.263 
 0319: set_actor 2@ running 1 
 
-:INTRO_13904
-TIMERA = 0 // @ = int 
+:INTRO_4_resettimer1
+TIMERA = 0  
 
-:INTRO_13911
+:INTRO_4_waitfortimer1
+gosub @INTRO_4_cutsceneskip
+if
+  $13 == 0
+jf @INTRO_4_moveplayer
 if 
-  1500 > TIMERA // int > @ 
-jf @INTRO_13957 
+  1500 > TIMERA  
+jf @INTRO_4_kenrunto2 
 wait 0 
-if 
-   not Actor.Dead(2@)
-jf @INTRO_13950 
+jump @INTRO_4_waitfortimer1 
 
-:INTRO_13950
-jump @INTRO_13911 
-
-:INTRO_13957
+:INTRO_4_kenrunto2
 0395: clear_area 0 at 113.655 -815.814 11.029 range 1.0 
 Camera.SetPosition(113.655, -815.814, 11.029, 0.0, 0.0, 0.0)
 Camera.PointAt(114.307, -816.57, 11.083, 2)
 if 
    not Actor.Dead(2@)
-jf @INTRO_14078 
+jf @INTRO_4_moveplayer 
 009F: set_actor 2@ idle 
 011C: actor 2@ clear_objective 
 Actor.PutAt(2@, 125.809, -815.263, 9.444)
-
-:INTRO_14078
-if 
-   not Actor.Dead(2@)
-jf @INTRO_14123 
 0211: actor 2@ walk_to 116.269 -825.438 
 0319: set_actor 2@ running 1 
-5@ = 1 // @ = int 
+5@ = 1  
 
-:INTRO_14123
+:INTRO_4_moveplayer
 if 
    not Actor.Driving($PLAYER_ACTOR)
-jf @INTRO_14176 
+jf @INTRO_4_moveplayerfromcar 
 Actor.PutAt($PLAYER_ACTOR, 136.457, -817.37, 9.44)
 Actor.Angle($PLAYER_ACTOR) = 225.495
-jump @INTRO_14196 
+jump @INTRO_4_resettimer2 
 
-:INTRO_14176
+:INTRO_4_moveplayerfromcar
 0362: put_actor $PLAYER_ACTOR at 136.457 -817.37 9.44 and_remove_from_car 
-
-:INTRO_14196
 if 
    not Actor.Driving($PLAYER_ACTOR)
-jf @INTRO_14222 
+jf @INTRO_4_resettimer2 
 Actor.Angle($PLAYER_ACTOR) = 225.495
 
-:INTRO_14222
-TIMERB = 0 // @ = int 
+:INTRO_4_resettimer2
+TIMERB = 0  
 
-:INTRO_14229
+:INTRO_4_waitfortimer2
+gosub @INTRO_4_cutsceneskip
+if
+  $13 == 0
+jf @INTRO_finish
 if 
-  1350 > TIMERB // int > @ 
-jf @INTRO_14275 
+  1350 > TIMERB  
+jf @INTRO_finish 
 wait 0 
-if 
-   not Actor.Dead(2@)
-jf @INTRO_14268 
+jump @INTRO_4_waitfortimer2 
 
-:INTRO_14268
-jump @INTRO_14229 
-
-:INTRO_14275
+:INTRO_finish
 Camera.SetBehindPlayer
 Camera.Restore_WithJumpCut
 03D5: remove_text 'INTRO4'  // I'll drop by your office tomorrow and we can start sorting this mess out.
@@ -2649,14 +2603,14 @@ Car.RemoveReferences(0@)
 Car.RemoveReferences(1@)
 014C: set_parked_car_generator $1912 cars_to_generate_to 101 
 Actor.DestroyInstantly(2@)
-$220 = 1 // $ = int 
-$ONMISSION = 0 // $ = int 
+$220 = 1  
+$ONMISSION = 0  
 if 
    not Car.Wrecked(0@)
-jf @INTRO_14391 
+jf @INTRO_finish2 
 Car.SetImmunities(0@, 0, 0, 0, 0, 0)
 
-:INTRO_14391
+:INTRO_finish2
 0296: unload_special_actor 10 
 Model.Destroy(#ADMIRAL)
 Model.Destroy(#FAGGIO)
@@ -2668,24 +2622,37 @@ mission_cleanup
 terminate_this_script 
 return 
 
-:INTRO_14443
+:INTRO_cutsceneskip
 if 
-  $13 == 0 // $ == int 
-jf @INTRO_14491 
+  $13 == 0  
+jf @INTRO_cutsceneskip2 
 if and
 80E1:   not player 0 pressed_button 16 
 80E1:   not player 0 pressed_button 12 
-jf @INTRO_14491 
-$13 = 1 // $ = int 
+jf @INTRO_cutsceneskip2 
+$13 = 1  
 
-:INTRO_14491
+:INTRO_cutsceneskip2
 if 
-  $13 == 1 // $ == int 
-jf @INTRO_14529 
+  $13 == 1  
+jf @INTRO_cutsceneskip3 
 if 
 056A:   has_cutscene_been_interrupted 
-jf @INTRO_14529 
-$13 = 2 // $ = int 
+jf @INTRO_cutsceneskip3 
+$13 = 2  
 
-:INTRO_14529
+:INTRO_cutsceneskip3
 return 
+
+:INTRO_4_cutsceneskip
+if 
+  $13 == 0
+jf @INTRO_4_cutsceneskip2
+if or
+00E1:   player 0 pressed_button 16 
+00E1:   player 0 pressed_button 12 
+jf @INTRO_4_cutsceneskip2
+$13 = 1
+
+:INTRO_4_cutsceneskip2
+return

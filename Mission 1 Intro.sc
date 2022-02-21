@@ -2321,21 +2321,27 @@ jf @INTRO_4_carstuckfailsafe
 jump @INTRO_4_dialoguestart_pokehead 
 
 :INTRO_4_carstuckfailsafe
-if 
+if and
   4@ == 1  
-jf @INTRO_4_cardriveto1 
-if 
   TIMERB >= 30000  
-jf @INTRO_4_cardriveto1 
-if 
-   not Car.Wrecked(0@)
-jf @INTRO_4_cardriveto1 
-if 
-81AF:   not car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0 
-jf @INTRO_4_cardriveto1 
+  not Car.Wrecked(0@)
+  81AF:   not car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0 
+jf @INTRO_4_cardriveskip 
 4@ = 3  
 Car.PutAt(0@, 132.6, -818.278, 9.446)
 Car.Angle(0@) = 206.0214
+
+:INTRO_4_cardriveskip
+gosub @INTRO_4_cutsceneskip
+if
+  $13 > 0
+jf @INTRO_4_cardriveto1
+if 
+  81AF:   not car 0@ 0 136.4 -819.482 10.148 radius 5.0 5.0 4.0 
+jf @INTRO_4_moveplayer 
+Car.PutAt(0@, 136.4, -819.482, 9.446)
+Car.Angle(0@) = 206.0214
+jump @INTRO_4_moveplayer
 
 :INTRO_4_cardriveto1
 if 
@@ -2589,6 +2595,9 @@ jump @INTRO_4_waitfortimer2
 :INTRO_finish
 Camera.SetBehindPlayer
 Camera.Restore_WithJumpCut
+03D5: remove_text 'INTRO1'
+03D5: remove_text 'INTRO2'
+03D5: remove_text 'INTRO3'
 03D5: remove_text 'INTRO4'  // I'll drop by your office tomorrow and we can start sorting this mess out.
 041E: set_radio_station 1 -1 
 03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0 
@@ -2598,7 +2607,7 @@ Player.CanMove($PLAYER_CHAR, True)
 02A3: enable_widescreen 0 
 Car.RemoveReferences(0@)
 Car.RemoveReferences(1@)
-014C: set_parked_car_generator $1912 cars_to_generate_to 101 
+014C: set_parked_car_generator $PARKEDCAR_ADMIRAL_KENS cars_to_generate_to 101 
 Actor.DestroyInstantly(2@)
 $220 = 1  
 $ONMISSION = 0  
@@ -2642,6 +2651,9 @@ $13 = 2
 return 
 
 :INTRO_4_cutsceneskip
+if
+  not fading
+jf @INTRO_4_cutsceneskip2
 if 
   $13 == 0
 jf @INTRO_4_cutsceneskip2

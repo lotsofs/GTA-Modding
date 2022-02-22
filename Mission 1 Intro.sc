@@ -2607,7 +2607,7 @@ Player.CanMove($PLAYER_CHAR, True)
 02A3: enable_widescreen 0 
 Car.RemoveReferences(0@)
 Car.RemoveReferences(1@)
-014C: set_parked_car_generator $PARKEDCAR_ADMIRAL_KENS cars_to_generate_to 101 
+014C: set_parked_car_generator $1912 cars_to_generate_to 101 
 Actor.DestroyInstantly(2@)
 $220 = 1  
 $ONMISSION = 0  

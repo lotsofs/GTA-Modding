@@ -1,292 +1,248 @@
 :INITIAL
 script_name 'INITIAL' 
-$DEFAULT_WAIT_TIME = 250 // $ = int 
-$92 = 0.0625 // $ = float 
-0086: $93 = $92 // $ = $ float 
-$93 /= 2.0 // $ /= float 
-0086: $94 = $93 // $ = $ float 
-$94 /= 2.0 // $ /= float 
-$123 = 0 // $ = int 
-$7 = 0 // $ = int 
-$8 = 0 // $ = int 
-$9 = 0 // $ = int 
-$10 = 0 // $ = int 
-$11 = 0 // $ = int 
-$61 = 0 // $ = int 
-$13 = 0 // $ = int 
-$44 = 0 // $ = int 
-$45 = 0 // $ = int 
-$46 = 0 // $ = int 
-$51 = 0 // $ = int 
-$52 = 0 // $ = int 
-$53 = 0 // $ = int 
-$54 = 0 // $ = int 
-$24 = 0 // $ = int 
-$35 = 0 // $ = int 
-$31 = 0 // $ = int 
-$25 = 0 // $ = int 
-$21 = 0 // $ = int 
-$47 = 0 // $ = int 
-$66 = 0 // $ = int 
-$48 = 0 // $ = int 
-$55 = 0 // $ = int 
-$220 = 0 // $ = int 
-$222 = 0 // $ = int 
-$PASSED_LAW1_THE_PARTY = 0 // $ = int 
-$PASSED_LAW2_BACK_ALLEY_BRAWL = 0 // $ = int 
-$PASSED_LAW3_JURY_FURY = 0 // $ = int 
-$PASSED_LAW4_RIOT = 0 // $ = int 
-$PASSED_COL1_TREACHEROUS_SWINE = 0 // $ = int 
-$PASSED_COL2_MALL_SHOOTOUT = 0 // $ = int 
-$PASSED_COL3_GUARDIAN_ANGELS = 0 // $ = int 
-$PASSED_COL4_SIR_YES_SIR = 0 // $ = int 
-$PASSED_COL5_ALL_HANDS_ON_DECK = 0 // $ = int 
-$PASSED_COK1_THE_CHASE = 0 // $ = int 
-$PASSED_COK2_PHNOM_PENH_86 = 0 // $ = int 
-$PASSED_COK3_THE_FASTEST_BOAT = 0 // $ = int 
-$PASSED_COK4_SUPPLY_AND_DEMAND = 0 // $ = int 
-$PASSED_ASS1_RUB_OUT = 0 // $ = int 
-$240 = 0 // $ = int 
-$PASSED_KENT1_DEATH_ROW = 0 // $ = int 
-$PASSED_TEX1_FOUR_IRON = 0 // $ = int 
-$245 = 0 // $ = int 
-$246 = 0 // $ = int 
-$248 = 0 // $ = int 
-$249 = 0 // $ = int 
-$250 = 0 // $ = int 
-$251 = 0 // $ = int 
-$257 = 0 // $ = int 
-$258 = 0 // $ = int 
-$259 = 0 // $ = int 
-$260 = 0 // $ = int 
-$266 = 0 // $ = int 
-$267 = 0 // $ = int 
-$269 = 0 // $ = int 
-$270 = 0 // $ = int 
-$272 = 0 // $ = int 
-$273 = 0 // $ = int 
-$275 = 0 // $ = int 
-$276 = 0 // $ = int 
-$277 = 0 // $ = int 
-$279 = 0 // $ = int 
-$280 = 0 // $ = int 
-$281 = 0 // $ = int 
-$282 = 0 // $ = int 
-$PASSED_HAT1_JUJU_SCRAMBLE = 0 // $ = int 
-$PASSED_HAT2_BOMBS_AWAY = 0 // $ = int 
-$PASSED_HAT3_DIRTY_LICKINS = 0 // $ = int 
-$PASSED_ROCK1_LOVE_JUICE = 0 // $ = int 
-$PASSED_ROCK2_PSYCHO_KILLER = 0 // $ = int 
-$PASSED_ROCK3_PUBLICITY_TOUR = 0 // $ = int 
-$291 = 0 // $ = int 
-$305 = 0 // $ = int 
-$304 = 0 // $ = int 
-$298 = 0 // $ = int 
-$299 = 0 // $ = int 
-$300 = 0 // $ = int 
-$301 = 0 // $ = int 
-$302 = 0 // $ = int 
-$303 = 0 // $ = int 
-$307 = 0 // $ = int 
-$308 = 0 // $ = int 
-$309 = 0 // $ = int 
-$310 = 0 // $ = int 
-$312 = 0 // $ = int 
-$ONMISSION = 0 // $ = int 
-$314 = 0 // $ = int 
-$315 = 0 // $ = int 
-$316 = 0 // $ = int 
-$317 = 0 // $ = int 
-$337 = 0 // $ = int 
-$332 = 0 // $ = int 
-$331 = 0 // $ = int 
-$323 = 0 // $ = int 
-$324 = 0 // $ = int 
-$325 = 0 // $ = int 
-$326 = 0 // $ = int 
-$327 = 0 // $ = int 
-$328 = 0 // $ = int 
-$329 = 0 // $ = int 
-$330 = 0 // $ = int 
-$333 = 0 // $ = int 
-$334 = 0 // $ = int 
-$335 = 0 // $ = int 
-$336 = 0 // $ = int 
-$338 = 0 // $ = int 
-$347 = 0 // $ = int 
-$348 = 0 // $ = int 
-$349 = 0 // $ = int 
-$350 = 0 // $ = int 
-$339 = 0 // $ = int 
-$340 = 0 // $ = int 
-$341 = 0 // $ = int 
-$351 = 0 // $ = int 
-$342 = 0 // $ = int 
-$343 = 0 // $ = int 
-$344 = 0 // $ = int 
-$353 = 0 // $ = int 
-$354 = 0 // $ = int 
-$361 = 0 // $ = int 
-$362 = 0 // $ = int 
-$363 = 0 // $ = int 
-$364 = 0 // $ = int 
-$365 = 0 // $ = int 
-$366 = -425.0 // $ = float 
-$367 = 1410.0 // $ = float 
-$368 = 10.0 // $ = float 
-$371 = 0 // $ = int 
-$370 = 0 // $ = int 
-$372 = 0 // $ = int 
-$369 = 0 // $ = int 
-$375 = 0 // $ = int 
-$373 = 0 // $ = int 
-$382 = 0 // $ = int 
-$376 = 0 // $ = int 
-$377 = 0 // $ = int 
-$378 = 0 // $ = int 
-$379 = 0 // $ = int 
-$380 = 0 // $ = int 
-$381 = 0 // $ = int 
-$383 = 0 // $ = int 
-$384 = 0 // $ = int 
-$385 = 0 // $ = int 
-$386 = 0 // $ = int 
-$36 = 0 // $ = int 
-$387 = 0 // $ = int 
-$388 = 0 // $ = int 
-$389 = 0 // $ = int 
-$390 = 0 // $ = int 
-$391 = 0 // $ = int 
-$392 = 0 // $ = int 
-$397 = 0 // $ = int 
-$398 = 0 // $ = int 
-$399 = 0 // $ = int 
-$400 = 0 // $ = int 
-$401 = 99999999 // $ = int 
-$402 = 99999999 // $ = int 
-$403 = 99999999 // $ = int 
-$404 = 99999999 // $ = int 
-$405 = 99999999 // $ = int 
-$406 = 99999999 // $ = int 
-$407 = 99999999 // $ = int 
-$408 = 99999999 // $ = int 
-$409 = 99999999 // $ = int 
-$410 = 99999999 // $ = int 
-$411 = 99999999 // $ = int 
-$412 = 99999999 // $ = int 
-$413 = 99999999 // $ = int 
-$414 = 99999999 // $ = int 
-$415 = 99999999 // $ = int 
-$416 = 99999999 // $ = int 
-$452 = 0 // $ = int 
-$444 = 0 // $ = int 
-$254 = 0 // $ = int 
-$255 = 0 // $ = int 
-$62 = 0 // $ = int 
-$103 = 0 // $ = int 
-$104 = 0 // $ = int 
-$105 = 0 // $ = int 
-$106 = 0 // $ = int 
-$107 = 0 // $ = int 
-$108 = 0 // $ = int 
-$109 = 0 // $ = int 
-$498 = -569.1451 // $ = float 
-$499 = 851.0923 // $ = float 
-$500 = 22.8402 // $ = float 
-$501 = 28.4463 // $ = float 
-$502 = -1311.761 // $ = float 
-$503 = 16.4712 // $ = float 
-$504 = 375.845 // $ = float 
-$505 = 332.9194 // $ = float 
-$506 = 11.5155 // $ = float 
-$507 = -886.5938 // $ = float 
-$508 = 236.5693 // $ = float 
-$509 = 13.9773 // $ = float 
-$510 = -244.6 // $ = float 
-$511 = -491.3 // $ = float 
-$512 = 10.6 // $ = float 
-$531 = -63.4 // $ = float 
-$532 = -1481.8 // $ = float 
-$533 = 9.4 // $ = float 
-$534 = 364.9 // $ = float 
-$535 = 1055.7 // $ = float 
-$536 = 18.2 // $ = float 
-$537 = -677.0 // $ = float 
-$538 = 1205.6 // $ = float 
-$539 = 10.0 // $ = float 
-$540 = 202.7 // $ = float 
-$541 = -474.1 // $ = float 
-$542 = 10.1 // $ = float 
-$543 = 364.9 // $ = float 
-$544 = 1078.0 // $ = float 
-$545 = 18.0 // $ = float 
-$546 = -967.5 // $ = float 
-$547 = -693.2 // $ = float 
-$548 = 10.3 // $ = float 
-$516 = 36.798 // $ = float 
-$517 = -1024.404 // $ = float 
-$518 = 9.451 // $ = float 
-$519 = 482.5293 // $ = float 
-$520 = 244.276 // $ = float 
-$521 = 10.09 // $ = float 
-$522 = 38.244 // $ = float 
-$523 = -1024.251 // $ = float 
-$524 = 9.451 // $ = float 
-$525 = -1481.872 // $ = float 
-$526 = -825.3049 // $ = float 
-$527 = 13.8777 // $ = float 
-$528 = -978.0145 // $ = float 
-$529 = -530.7043 // $ = float 
-$530 = 9.9513 // $ = float 
-$696 = 893.5 // $ = float 
-$697 = -306.1 // $ = float 
-$698 = -100.0 // $ = float 
-$699 = 103.0 // $ = float 
-$700 = -484.2 // $ = float 
-$701 = -100.0 // $ = float 
-$702 = -665.0 // $ = float 
-$703 = -6.5 // $ = float 
-$704 = -100.0 // $ = float 
-$705 = 925.0 // $ = float 
-$706 = -359.5 // $ = float 
-$707 = -100.0 // $ = float 
-$708 = 379.0 // $ = float 
-$709 = -493.8 // $ = float 
-$710 = -100.0 // $ = float 
-$711 = -1128.0 // $ = float 
-$712 = 32.5 // $ = float 
-$713 = -100.0 // $ = float 
-$1580 = 0 // $ = int 
-$1581 = 0 // $ = int 
-$1582 = 0 // $ = int 
-$1583 = 0 // $ = int 
-$1584 = 0 // $ = int 
-$1585 = 0 // $ = int 
-$1586 = 0 // $ = int 
-$1587 = 0 // $ = int 
-$1588 = 0 // $ = int 
-$1589 = 0 // $ = int 
-$1590 = 0 // $ = int 
-$1591 = 0 // $ = int 
-$1592 = 0 // $ = int 
-$1593 = 0 // $ = int 
-$1594 = 999999 // $ = int 
-$1595 = 999999 // $ = int 
-$1596 = 999999 // $ = int 
-$1597 = 0 // $ = int 
-$1598 = 0 // $ = int 
-$1603 = 0 // $ = int 
-$1604 = 0 // $ = int 
-04CE: $433 = create_icon_marker_without_sphere 16 at $531 $532 $533 
-04CE: $434 = create_icon_marker_without_sphere 16 at 364.8 1051.5 21.0 
-04CE: $435 = create_icon_marker_without_sphere 16 at $537 $538 $539 
-04CE: $436 = create_icon_marker_without_sphere 18 at $540 $541 $542 
-04CE: $437 = create_icon_marker_without_sphere 18 at 364.8 1086.5 21.0 
-04CE: $438 = create_icon_marker_without_sphere 18 at $546 $547 $548 
-04CE: $439 = create_icon_marker_without_sphere 27 at -3.8 -1265.8 12.0 
-04CE: $440 = create_icon_marker_without_sphere 27 at 319.0 441.3 12.0 
-04CE: $441 = create_icon_marker_without_sphere 27 at -903.0 -1261.1 12.0 
-04CE: $442 = create_icon_marker_without_sphere 27 at -876.2 -105.5 12.0 
+$DEFAULT_WAIT_TIME = 250 // $23 
+$ONMISSION = 0  
+$123 = 0  // Blob flag -- Is player doing the mission (eg. hey, get back in the vehicle)
+$9 = 0  // Current game time hours
+$10 = 0  // Current game time minutes
+
+// Unsorted
+$61 = 0  
+$62 = 0 
+$342 = 0  
+$353 = 0  
+$372 = 0  
+$369 = 0  
+$390 = 0  
+$397 = 0  
+$399 = 0  
+$400 = 0  
+$452 = 0  
+$2097 = 0  
+
+// Mission Completion
+$220 = 0  // Introduction
+$222 = 0  // An Old Friend
+$PASSED_LAW1_THE_PARTY = 0  // 224
+$PASSED_LAW2_BACK_ALLEY_BRAWL = 0 // 225 
+$PASSED_LAW3_JURY_FURY = 0  // 226
+$PASSED_LAW4_RIOT = 0  // 227
+$PASSED_COL1_TREACHEROUS_SWINE = 0  // 229
+$PASSED_COL2_MALL_SHOOTOUT = 0   // 230
+$PASSED_COL3_GUARDIAN_ANGELS = 0  // 231
+$PASSED_COL4_SIR_YES_SIR = 0   // 232
+$PASSED_COL5_ALL_HANDS_ON_DECK = 0  // 233
+$PASSED_COK1_THE_CHASE = 0  // 235
+$PASSED_COK2_PHNOM_PENH_86 = 0  // 236
+$PASSED_COK3_THE_FASTEST_BOAT = 0  // 237
+$PASSED_COK4_SUPPLY_AND_DEMAND = 0  // 238
+$PASSED_ASS1_RUB_OUT = 0  // 239
+$PASSED_KENT1_DEATH_ROW = 0  // 242
+$PASSED_TEX1_FOUR_IRON = 0  // 244
+$245 = 0  // Avery 2
+$246 = 0  // Avery 3
+$248 = 0  // Malibu 1
+$249 = 0  // Malibu 2
+$250 = 0  // Malibu 3
+$251 = 0  // Malibu 4
+$254 = 0  // Phil 1
+$255 = 0  // Phil 2
+$257 = 0  // Film 1
+$258 = 0  // Film 2
+$259 = 0  // Film 3
+$260 = 0  // Film 4
+$266 = 0  // Mansion 1
+$267 = 0  // Mansion 2
+$268 = 0  // Mansion 3
+$269 = 0  // Cap The Collector
+$270 = 0  // KYFC
+$272 = 0  // Printworks 1
+$273 = 0  // Printworks 2
+$275 = 0  // Biker 1
+$276 = 0  // Biker 2
+$277 = 0  // Biker 3
+$279 = 0  // Umberto 1
+$280 = 0  // Umberto 2
+$281 = 0  // Umberto 3
+$282 = 0  // Umberto 4
+$PASSED_HAT1_JUJU_SCRAMBLE = 0  // 284
+$PASSED_HAT2_BOMBS_AWAY = 0   // 285
+$PASSED_HAT3_DIRTY_LICKINS = 0  // 286
+$PASSED_ROCK1_LOVE_JUICE = 0  // 288
+$PASSED_ROCK2_PSYCHO_KILLER = 0  // 289
+$PASSED_ROCK3_PUBLICITY_TOUR = 0  // 290
+$298 = 0  // Payphone 1
+$299 = 0  // Payphone 2
+$300 = 0  // Payphone 3
+$301 = 0  // Payphone 4
+$302 = 0  // Payphone 5
+$307 = 0  // Taxi 0
+$308 = 0  // Taxi 1
+$309 = 0  // Taxi 2
+$310 = 0  // Taxi 3
+$338 = 0  // Cherry Poppers 0
+$337 = 0  // Cherry Poppers 1 (Never set)
+$339 = 0  // PCJ Playground
+$351 = 0  // Cone Crazy
+$363 = 0  // Trial By Dirt
+$364 = 0  // Test Track
+$398 = 0  // RC Raider Pickup
+$1604 = 0  // Shooting Range (30 points)
+$108 = 0  // Shooting Range (45, fast reload)
+$373 = 0  // Taxi Driver  
+$389 = 0  // Pizza Delivery
+$1581 = 0  // Paramedic
+$1582 = 0  // Vigilante
+$1583 = 0  // Firefighter
+$1584 = 0  // Chopper Checkpoint Downtown
+$1585 = 0  // Chopper Checkpoint Ocean Beach
+$1586 = 0  // Chopper Checkpoint Vice Point
+$1587 = 0  // Chopper Checkpoint Little Haiti
+$1588 = 0  // SSA Race 1
+$1589 = 0  // SSA Race 2
+$1590 = 0  // SSA Race 3
+$1591 = 0  // SSA Race 4
+$1592 = 0  // SSA Race 5
+$1593 = 0  // SSA Race 6
+$55 = 0  // Dirtring
+$1597 = 0  // Hotring
+$1598 = 0  // Blooding
+$51 = 0  // SSA List 1
+$52 = 0  // SSA List 2
+$53 = 0  // SSA List 3
+$54 = 0  // SSA List 4
+
+// Stadium Event trigger variables
+$7 = 0  
+$8 = 0  
+$11 = 0  
+
+// Tutorial progress variables
+$44 = 0
+$45 = 0
+$46 = 0
+$25 = 0  
+$47 = 0  
+$48 = 0  
+$332 = 0  
+$103 = 0  
+$104 = 0  
+$105 = 0  
+$106 = 0  
+
+// Save markers active in world bools
+$21 = 0  // Mansion
+$36 = 0  // El Swanko Casa
+$444 = 0  // Ocean View Hotel
+
+// Mission markers
+$66 = 0  // An Old Friend
+
+// On Mission Mission Specific 
+$314 = 0  // Taxi Driver
+$354 = 0  // PCJ Playground
+$371 = 0  // Any Taxi or Kaufman mission
+$1603 = 0  // Sir Yes Sir & Cop Land (missions with soldiers in them)
+
+// Explanation Cutscenes Watched or Textboxes seen
+$347 = 0 // PCJ Playground
+$350 = 0 // Cone Crazy
+$375 = 0 // Taxi Driver
+$392 = 0  // Bloodring (set but not checked)
+$107 = 0  // Publicity Tour
+$109 = 0  // The Shootist shooting tutorial
+$1580 = 0  // Spilling The Beans
+
+// Press ~button~ to start mission text boxes shown
+$370 = 0  // Taxi
+
+// Best Score in Races
+$401 = 99999999 // SSA 1 result 
+$402 = 99999999 // SSA 1 time
+$403 = 99999999 // SSA 2 result
+$404 = 99999999 // SSA 2 time
+$405 = 99999999 // SSA 3 result
+$406 = 99999999 // SSA 3 time
+$407 = 99999999 // SSA 4 result
+$408 = 99999999 // SSA 4 time
+$409 = 99999999 // SSA 5 result
+$410 = 99999999 // SSA 5 time
+$411 = 99999999 // SSA 6 result
+$412 = 99999999 // SSA 6 time
+$413 = 99999999 // Chopper Checkpoint Downtown time
+$414 = 99999999 // Chopper Checkpoint Ocean Beach time
+$415 = 99999999 // Chopper Checkpoint Vice Point time
+$416 = 99999999 // Chopper Checkpoint Little Haiti time
+$1594 = 999999  // Hotring lap time
+$1595 = 999999  // Hotring time
+$1596 = 999999  // Hotring result
+
+// Coordinates for markers
+$510 = -244.6 // Diaz 5
+$511 = -491.3 
+$512 = 10.6 
+$516 = 36.798 // Payphone 1
+$517 = -1024.404 
+$518 = 9.451 
+$519 = 482.5293 // Payphone 2
+$520 = 244.276 
+$521 = 10.09 
+$522 = 38.244 // Payphone 3
+$523 = -1024.251 
+$524 = 9.451 
+$525 = -1481.872 // Payphone 4
+$526 = -825.3049 
+$527 = 13.8777 
+$528 = -978.0145 // Payphone 5
+$529 = -530.7043 
+$530 = 9.9513 
+$498 = -569.1451 // Chopper Checkpoint Downtown
+$499 = 851.0923 
+$500 = 22.8402 
+$501 = 28.4463  // Chopper Checkpoint Ocean Beach
+$502 = -1311.761 
+$503 = 16.4712 
+$504 = 375.845  // Chopper Checkpoint Vice Point
+$505 = 332.9194 
+$506 = 11.5155 
+$507 = -886.5938  // Chopper Checkpoint Little Haiti
+$508 = 236.5693 
+$509 = 13.9773 
+$531 = -63.4 // Ammunation Ocean Beach
+$532 = -1481.8 
+$533 = 9.4 
+$534 = 364.9 // Ammunation Vice Point
+$535 = 1055.7 
+$536 = 18.2 
+$537 = -677.0 // Ammunation Downtown
+$538 = 1205.6 
+$539 = 10.0 
+$540 = 202.7 // Hardware Store Washington Beach
+$541 = -474.1 
+$542 = 10.1 
+$543 = 364.9 // Hardware Store Vice Point
+$544 = 1078.0 
+$545 = 18.0 
+$546 = -967.5 // Hardware Store Little Havana
+$547 = -693.2 
+$548 = 10.3 
+$705 = 925.0 // Placeholder for Nearest Pay 'n Spray for Taxi Driver
+$706 = -359.5 
+$707 = -100.0 
+
+// Radar Icons
+04CE: $433 = create_icon_marker_without_sphere 16 at $531 $532 $533 // Ammunation Ocean Beach
+04CE: $434 = create_icon_marker_without_sphere 16 at 364.8 1051.5 21.0 // Ammunation Vice Point
+04CE: $435 = create_icon_marker_without_sphere 16 at $537 $538 $539 // Ammunation Downtown
+04CE: $436 = create_icon_marker_without_sphere 18 at $540 $541 $542 // Hardware Store Washington Beach
+04CE: $437 = create_icon_marker_without_sphere 18 at 364.8 1086.5 21.0 // Hardware Store Vice Point
+04CE: $438 = create_icon_marker_without_sphere 18 at $546 $547 $548 // Hardware Store Little Havana
+04CE: $439 = create_icon_marker_without_sphere 27 at -3.8 -1265.8 12.0 // Pay N Spray Ocean Beach
+04CE: $440 = create_icon_marker_without_sphere 27 at 319.0 441.3 12.0 // Pay N Spray Vice Point
+04CE: $441 = create_icon_marker_without_sphere 27 at -903.0 -1261.1 12.0 // Pay N Spray Viceport
+04CE: $442 = create_icon_marker_without_sphere 27 at -876.2 -105.5 12.0 // Pay N Spray Little Haiti
+
+// Respawn stuff
 016C: restart_if_wasted_at 493.5 703.1 11.1 angle 90.0 
 016D: restart_if_busted_at 508.9 506.8 10.3 angle 174.0 
 016C: restart_if_wasted_at -108.3 -974.4 9.4 angle 283.9 
@@ -299,6 +255,24 @@ $1604 = 0 // $ = int
 058D: set_restart_mission_taxi_start 418.5 -422.6 9.3 angle 58.7 
 058D: set_restart_mission_taxi_start -665.3 793.7 10.5 angle 180.0 
 058D: set_restart_mission_taxi_start -873.0 -641.8 10.5 angle 97.1 
+
+// Gang Stuff
+0236: set_gang 0 car_to #CUBAN 
+0236: set_gang 1 car_to #VOODOO 
+0236: set_gang 2 car_to #GANGBUR 
+0236: set_gang 5 car_to #ANGEL 
+0592: set_gang 4 attack_player_with_cops 1 
+0237: set_gang 0 primary_weapon_to 17 secondary_weapon_to 0 
+0237: set_gang 1 primary_weapon_to 17 secondary_weapon_to 0 
+0237: set_gang 2 primary_weapon_to 17 secondary_weapon_to 0 
+0237: set_gang 3 primary_weapon_to 17 secondary_weapon_to 17 
+0237: set_gang 4 primary_weapon_to 17 secondary_weapon_to 17 
+0237: set_gang 5 primary_weapon_to 17 secondary_weapon_to 0 
+0237: set_gang 6 primary_weapon_to 17 secondary_weapon_to 17 
+03F1: pedtype 7 add_threat 256 
+03F1: pedtype 8 add_threat 128 
+
+// Zone info -- http://spaceeinstein.altervista.org/media/info-color.jpg
 015C: set_zone_gang_info 'STREET4' 1 13 0 0 0 0 0 0 0 0 0 30 
 015C: set_zone_gang_info 'STREET4' 0 10 0 0 0 0 0 0 0 0 0 40 
 0152: set_zone_car_info 'STREET4' 1 13 0 0 0 0 0 0 0 0 0 50 
@@ -642,6 +616,8 @@ $1604 = 0 // $ = int
 0152: set_zone_car_info 'ARMYBAS' 0 6 0 0 0 0 0 0 0 0 0 20 
 0324: set_zone_pedgroup_info 'ARMYBAS' 1 51 
 0324: set_zone_pedgroup_info 'ARMYBAS' 0 52 
+
+// Forbidden Ped Cubes
 022B: create_forbidden_for_peds_cube -956.0 -355.0 5.0 -898.0 -328.0 25.0 
 022B: create_forbidden_for_peds_cube 411.0 -600.0 -10.0 451.0 -553.0 30.0 
 022B: create_forbidden_for_peds_cube 450.0 -509.0 -10.0 472.0 -489.0 30.0 
@@ -673,6 +649,8 @@ $1604 = 0 // $ = int
 022B: create_forbidden_for_peds_cube -396.4 -583.6 15.0 -360.5 -555.6 33.0 
 022B: create_forbidden_for_peds_cube 468.0 -77.0 0.0 490.0 -54.0 30.0 
 022B: create_forbidden_for_peds_cube 354.9 -483.1 21.0 406.0 -490.0 0.0 
+
+// Forbidden Car Cubes
 01E8: create_forbidden_for_cars_cube -583.92 1371.84 8.0 -383.4 1531.17 25.0 
 01E8: create_forbidden_for_cars_cube 86.0 250.0 15.0 -100.0 281.0 30.0 
 01E8: create_forbidden_for_cars_cube 411.0 -600.0 -10.0 451.0 -553.0 30.0 
@@ -689,20 +667,8 @@ $1604 = 0 // $ = int
 01E8: create_forbidden_for_cars_cube 175.0 236.1 0.0 161.0 242.4 30.0 
 01E8: create_forbidden_for_cars_cube 149.8 231.4 0.0 136.0 235.3 30.0 
 01E8: create_forbidden_for_cars_cube 63.4 188.6 0.0 49.4 189.7 30.0 
-0236: set_gang 0 car_to #CUBAN 
-0236: set_gang 1 car_to #VOODOO 
-0236: set_gang 2 car_to #GANGBUR 
-0236: set_gang 5 car_to #ANGEL 
-0592: set_gang 4 attack_player_with_cops 1 
-0237: set_gang 0 primary_weapon_to 17 secondary_weapon_to 0 
-0237: set_gang 1 primary_weapon_to 17 secondary_weapon_to 0 
-0237: set_gang 2 primary_weapon_to 17 secondary_weapon_to 0 
-0237: set_gang 3 primary_weapon_to 17 secondary_weapon_to 17 
-0237: set_gang 4 primary_weapon_to 17 secondary_weapon_to 17 
-0237: set_gang 5 primary_weapon_to 17 secondary_weapon_to 0 
-0237: set_gang 6 primary_weapon_to 17 secondary_weapon_to 17 
-03F1: pedtype 7 add_threat 256 
-03F1: pedtype 8 add_threat 128 
+
+// Objects
 Object.Init($1779, #COMGATE1CLOSED, -715.082, -489.689, 12.549)
 Object.RemoveFromMissionCleanupList($1779)
 Object.Init($1780, #COMGATE2CLOSED, -181.451, -472.61, 11.353)
@@ -820,6 +786,8 @@ Object.Init($1829, #BNK_GRILL01, -915.401, -345.5, 23.987)
 Object.CollisionDetection($1829, False)
 Object.ToggleInMovingList($1829, False)
 Object.RemoveFromMissionCleanupList($1829)
+
+// Cars
 014B: $1992 = init_car_generator #ADMIRAL 8 8 force_spawn 0 alarm 50 door_lock 0 min_delay 0 max_delay 10000 at -401.2715 -534.6655 11.7534 angle 149.2032 
 014C: set_parked_car_generator $1992 cars_to_generate_to 101 
 014B: $1991 = init_car_generator #VICECHEE -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -870.4673 -717.2427 10.1069 angle 94.1213 
@@ -1156,30 +1124,35 @@ Object.RemoveFromMissionCleanupList($1829)
 014C: set_parked_car_generator $1939 cars_to_generate_to 0 
 014B: $84 = init_car_generator #POLMAV -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -614.0 804.0 30.0 angle 0.0 
 014C: set_parked_car_generator $84 cars_to_generate_to 101 
+
+
+// Pickups
+055B: $2096 = create_clothes_pickup 11 at -1200.3 -322.9 10.9 
+
 Pickup.Create($2035, #CHNSAW, 2, 30.0, -1330.9, 13.0)
 Pickup.Create($1999, #BAT, 2, 206.7, -1254.4, 12.0)
+Pickup.Create($2006, #CLEAVER, 15, 402.6, 102.5, 11.4)
+Pickup.Create($2008, #KATANA, 15, 476.9, 1014.9, 19.2)
+Pickup.Create($2009, #NITESTICK, 15, 402.4, -488.3, 12.4)
+Pickup.Create($2011, #BRASSKNUCKLE, 15, 224.0, -1207.5, 11.0)
+Pickup.Create($2012, #KNIFECUR, 15, 118.7, -1546.1, 10.8)
+Pickup.Create($2013, #MACHETE, 15, 56.6, -459.3, 11.4)
+Pickup.Create($2017, #GOLFCLUB, 2, 95.0, 279.2, 21.8)
+Pickup.Create($2020, #KATANA, 15, -554.11, -547.7, 10.7)
 032B: $2000 = create_weapon_pickup #COLT45 15 ammo 34 at -228.4 -1318.2 9.1 
 032B: $2001 = create_weapon_pickup #COLT45 15 ammo 34 at 340.5 -249.5 12.5 
 032B: $2002 = create_weapon_pickup #CHROMEGUN 15 ammo 16 at 42.3 -959.2 21.8 
 032B: $2003 = create_weapon_pickup #CHROMEGUN 15 ammo 16 at 568.9 -449.3 11.1 
 032B: $2004 = create_weapon_pickup #TEC9 15 ammo 100 at 287.9 50.7 10.8 
 032B: $2005 = create_weapon_pickup #GRENADE 15 ammo 4 at 362.2 -500.5 12.3 
-Pickup.Create($2006, #CLEAVER, 15, 402.6, 102.5, 11.4)
 032B: $2007 = create_weapon_pickup #RUGER 15 ammo 60 at 418.9 589.9 18.3 
-Pickup.Create($2008, #KATANA, 15, 476.9, 1014.9, 19.2)
-Pickup.Create($2009, #NITESTICK, 15, 402.4, -488.3, 12.4)
-Pickup.Create($2011, #BRASSKNUCKLE, 15, 224.0, -1207.5, 11.0)
-Pickup.Create($2012, #KNIFECUR, 15, 118.7, -1546.1, 10.8)
-Pickup.Create($2013, #MACHETE, 15, 56.6, -459.3, 11.4)
 032B: $2014 = create_weapon_pickup #UZI 15 ammo 60 at 5.4 -1277.0 10.4 
 032B: $2036 = create_weapon_pickup #UZI 15 ammo 60 at 157.0 -895.3 12.3 
 032B: $2010 = create_weapon_pickup #BOMB 15 ammo 4 at 556.6 207.4 14.5 
 032B: $2015 = create_weapon_pickup #M4 15 ammo 60 at -32.8 1019.2 13.0 
 032B: $2016 = create_weapon_pickup #UZI 15 ammo 60 at 17.3 1145.7 23.5 
-Pickup.Create($2017, #GOLFCLUB, 2, 95.0, 279.2, 21.8)
 032B: $2018 = create_weapon_pickup #FLAME 15 ammo 300 at -546.0 -418.9 9.8 
 032B: $2019 = create_weapon_pickup #SNIPER 15 ammo 20 at -476.4 -571.2 12.9 
-Pickup.Create($2020, #KATANA, 15, -554.11, -547.7, 10.7)
 032B: $2021 = create_weapon_pickup #MOLOTOV 15 ammo 4 at -755.7 1347.5 11.8 
 032B: $2022 = create_weapon_pickup #UZI 15 ammo 60 at -545.8 694.6 11.0 
 032B: $2023 = create_weapon_pickup #M4 15 ammo 60 at -980.4 118.7 9.3 
@@ -1194,6 +1167,7 @@ Pickup.Create($2020, #KATANA, 15, -554.11, -547.7, 10.7)
 032B: $2032 = create_weapon_pickup #PYTHON 15 ammo 12 at -1182.7 -61.1 11.4 
 032B: $2033 = create_weapon_pickup #BUDDYSHOT 15 ammo 10 at -1305.2 177.1 11.4 
 032B: $2034 = create_weapon_pickup #LASER 15 ammo 14 at -1114.3 -602.0 26.0 
+
 Pickup.Create($2037, #HEALTH, 1, -113.2, -975.7, 10.4)
 Pickup.Create($2038, #HEALTH, 15, -225.1, -1158.1, 9.1)
 Pickup.Create($2039, #HEALTH, 15, 456.2, -471.4, 16.6)
@@ -1253,6 +1227,8 @@ Pickup.Create($2092, #ADRENALINE, 15, -1022.1, -547.0, 11.2)
 Pickup.Create($2093, #ADRENALINE, 15, -882.0, 111.2, 9.3)
 Pickup.Create($2094, #ADRENALINE, 1, -857.1, -83.6, 11.5)
 Pickup.Create($2095, #ADRENALINE, 1, -839.0, 740.6, 11.3)
+
+// Hidden Packages
 02EC: put_hidden_package_at 479.6 -1718.5 15.6 
 02EC: put_hidden_package_at 708.4 -498.2 12.3 
 02EC: put_hidden_package_at -213.0 -1647.1 13.1 
@@ -1353,8 +1329,8 @@ Pickup.Create($2095, #ADRENALINE, 1, -839.0, 740.6, 11.3)
 02EC: put_hidden_package_at -1328.0 -537.1 13.9 
 02EC: put_hidden_package_at -1063.5 -965.5 14.8 
 02EC: put_hidden_package_at -1265.8 -1346.9 29.6 
-055B: $2096 = create_clothes_pickup 11 at -1200.3 -322.9 10.9 
-$2097 = 0 // $ = int 
+
+// Police Ambush Points
 04F8: define_police_trigger_type 1 if_player_with_wanted_level_in_rectangle 225.0 -1244.0 227.4 -1248.5 spawn_policeA_at 249.0 -1255.0 headed_towards 246.0 -1250.6 spawn_policeB_at 208.4 -1238.4 headed_towards 209.6 -1243.5 
 04F8: define_police_trigger_type 6 if_player_with_wanted_level_in_rectangle 235.3 -1299.6 261.1 -1270.7 spawn_policeA_at 212.2 -1309.6 headed_towards 228.0 -1311.3 spawn_policeB_at 221.2 -1309.6 headed_towards 228.0 -1311.3 
 04F8: define_police_trigger_type 6 if_player_with_wanted_level_in_rectangle 220.0 -1144.0 232.0 -1136.0 spawn_policeA_at 190.5 -1101.5 headed_towards 185.5 -1122.7 spawn_policeB_at 278.8 -1112.0 headed_towards 269.0 -1140.5 

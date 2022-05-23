@@ -788,6 +788,7 @@ Object.ToggleInMovingList($1829, False)
 Object.RemoveFromMissionCleanupList($1829)
 
 // Cars
+014B: $84 = init_car_generator #POLMAV -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -614.0 804.0 30.0 angle 0.0 
 014B: $1832 = init_car_generator #OCEANIC 6 1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at 242.6 -1274.6 10.0 angle 165.0 
 014B: $1836 = init_car_generator #AMBULAN -1 -1 force_spawn 0 alarm 0 door_lock 10 min_delay 0 max_delay 10000 at 472.5 701.2 10.5 angle 90.0 
 014B: $1837 = init_car_generator #STALLION -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at 127.0 -1158.0 32.0 angle 180.0 
@@ -867,7 +868,7 @@ Object.RemoveFromMissionCleanupList($1829)
 014B: $1992 = init_car_generator #ADMIRAL 8 8 force_spawn 0 alarm 50 door_lock 0 min_delay 0 max_delay 10000 at -401.2715 -534.6655 11.7534 angle 149.2032 
 014B: $1993 = init_car_generator #MAVERICK -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -853.6609 1353.785 68.6104 angle 0.0 
 014B: $1994 = init_car_generator #SENTINEL -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1033.211 -856.8564 12.0452 angle 210.278 
-014B: $84 = init_car_generator #POLMAV -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -614.0 804.0 30.0 angle 0.0 
+014C: set_parked_car_generator $84 cars_to_generate_to 101 
 014C: set_parked_car_generator $1833 cars_to_generate_to 101 
 014C: set_parked_car_generator $1836 cars_to_generate_to 101 
 014C: set_parked_car_generator $1837 cars_to_generate_to 101 
@@ -947,7 +948,24 @@ Object.RemoveFromMissionCleanupList($1829)
 014C: set_parked_car_generator $1992 cars_to_generate_to 101 
 014C: set_parked_car_generator $1993 cars_to_generate_to 101 
 014C: set_parked_car_generator $1994 cars_to_generate_to 101 
-014C: set_parked_car_generator $84 cars_to_generate_to 101 
+
+// Carspawners originally from MAIN
+014B: $87 = init_car_generator #DELUXO -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1022.6 -868.6 12.2 angle 175.0 
+014B: $88 = init_car_generator #SABRETUR -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1014.1 -869.4 12.2 angle 188.0 
+014B: $89 = init_car_generator #SANDKING -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1014.3 -868.8 17.9 angle 195.0 
+014B: $90 = init_car_generator #HOTRING -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1023.2 -868.1 17.9 angle 172.0 
+014B: $1977 = init_car_generator #SEASPAR -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -379.0 -632.1 10.2 angle 187.2 
+014B: $1978 = init_car_generator #RHINO -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1720.3 -239.6 14.8 angle 92.0 
+014B: $1979 = init_car_generator #HUNTER -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1681.2 -103.7 14.7 angle 180.0 
+014B: $2098 = init_car_generator #HUNTER -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -72.4 -1607.9 12.7 angle 0.0 
+014C: set_parked_car_generator $87 cars_to_generate_to 0 
+014C: set_parked_car_generator $88 cars_to_generate_to 0 
+014C: set_parked_car_generator $89 cars_to_generate_to 0 
+014C: set_parked_car_generator $90 cars_to_generate_to 0 
+014C: set_parked_car_generator $1977 cars_to_generate_to 0 
+014C: set_parked_car_generator $1978 cars_to_generate_to 0 
+014C: set_parked_car_generator $1979 cars_to_generate_to 0 
+014C: set_parked_car_generator $2098 cars_to_generate_to 0 
 
 // Carspawners that are disabled at some point (either temporarily or permanent)
 014B: $1830 = init_car_generator #KAUFMAN -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1003.1 207.4 11.0 angle 166.6 

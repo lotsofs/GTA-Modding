@@ -1,243 +1,274 @@
 //-------------MAIN---------------
 script_name 'MAIN' 
 fade 0 0 
+set_wb_check_to 0 
 042C: set_total_missions_to 88 
 030D: set_total_mission_points_to 154 
 01F0: set_max_wanted_level_to 4 
 02ED: set_total_hidden_packages_to 100 
-set_wb_check_to 0 
+0180: set_on_mission_flag_to $ONMISSION 
+
 00C0: set_current_time 22 0 
 04E4: request_collision_at 83.0 -849.8 
 Camera.SetAtPos(83.0, -849.8, 9.3)
 Player.Create($PLAYER_CHAR, #NULL, 83.0, -849.8, 9.3)
 Actor.EmulateFromPlayer($PLAYER_ACTOR, $PLAYER_CHAR)
 start_mission 0  // Initial
-Object.Init($ARENA_DOOR_1, #DTN_STADDOORA, -1109.615, 1330.097, 20.372)
+
+// create world objects
+// stadium stuff
+Object.Init($ARENA_DOOR_1, #DTN_STADDOORA, -1109.615, 1330.097, 20.372) //door 1
 Object.RemoveFromMissionCleanupList($ARENA_DOOR_1)
-Object.Init($ARENA_DOOR_2, #DTN_STADDOORB, -1109.615, 1331.932, 20.372)
+Object.Init($ARENA_DOOR_2, #DTN_STADDOORB, -1109.615, 1331.932, 20.372) //door 2
 Object.RemoveFromMissionCleanupList($ARENA_DOOR_2)
-Object.Init($6, #DTHOTRING_A, -1037.08, 1340.258, 36.552)
+Object.Init($6, #DTHOTRING_A, -1037.08, 1340.258, 36.552) //poster
 Object.RemoveFromMissionCleanupList($6)
-$67 = 0 // $ = int 
-Pickup.Create($110, #BRIBE, 15, 393.9, -60.2, 11.5)
-Pickup.Create($111, #BRIBE, 15, 116.0, -1313.1, 4.4)
-Pickup.Create($112, #BRIBE, 15, 393.7, -660.6, 10.7)
-Pickup.Create($113, #BRIBE, 15, 470.7, 70.1, 10.8)
-Pickup.Create($114, #BRIBE, 15, 382.7, 364.1, 10.8)
-Pickup.Create($115, #BRIBE, 15, 422.4, 971.2, 12.1)
-Pickup.Create($116, #BRIBE, 15, 89.1, 887.4, 10.5)
-Pickup.Create($117, #BRIBE, 15, -822.7, 1304.5, 11.7)
-Pickup.Create($118, #BRIBE, 15, -900.69, 251.4, 17.1)
-Pickup.Create($119, #BRIBE, 15, -973.7, 61.0, 10.4)
-Pickup.Create($120, #BRIBE, 15, -937.9, -114.1, 17.0)
-Pickup.Create($121, #BRIBE, 15, -1015.9, -627.9, 11.2)
-Pickup.Create($122, #BRIBE, 15, -906.3, -834.0, 15.7)
-014B: $87 = init_car_generator #DELUXO -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1022.6 -868.6 12.2 angle 175.0 
-014C: set_parked_car_generator $87 cars_to_generate_to 0 
-014B: $88 = init_car_generator #SABRETUR -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1014.1 -869.4 12.2 angle 188.0 
-014C: set_parked_car_generator $88 cars_to_generate_to 0 
-014B: $89 = init_car_generator #SANDKING -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1014.3 -868.8 17.9 angle 195.0 
-014C: set_parked_car_generator $89 cars_to_generate_to 0 
-014B: $90 = init_car_generator #HOTRING -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1023.2 -868.1 17.9 angle 172.0 
-014C: set_parked_car_generator $90 cars_to_generate_to 0 
-014B: $1977 = init_car_generator #SEASPAR -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -379.0 -632.1 10.2 angle 187.2 
-014C: set_parked_car_generator $1977 cars_to_generate_to 0 
-014B: $1978 = init_car_generator #RHINO -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1720.3 -239.6 14.8 angle 92.0 
-014C: set_parked_car_generator $1978 cars_to_generate_to 0 
-014B: $1979 = init_car_generator #HUNTER -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1681.2 -103.7 14.7 angle 180.0 
-014C: set_parked_car_generator $1979 cars_to_generate_to 0 
-014B: $2098 = init_car_generator #HUNTER -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -72.4 -1607.9 12.7 angle 0.0 
-014C: set_parked_car_generator $2098 cars_to_generate_to 0 
+// film studio stuff
 Object.Init($FILM_STUDIO_FRONT_GATE_CLOSED, #CI_GATESCLOSED, 11.697, 963.176, 12.258)
 Object.RemoveFromMissionCleanupList($FILM_STUDIO_FRONT_GATE_CLOSED)
 Object.Init($FILM_STUDIO_BACK_GATE_CLOSED, #CI_BACKGATECLOSE, -11.853, 884.06, 13.542)
 Object.RemoveFromMissionCleanupList($FILM_STUDIO_BACK_GATE_CLOSED)
+
+
+// create pickups
+// cop bribes
+Pickup.Create($110, #BRIBE, 15, 393.9, -60.2, 11.5) //Not far from Construction Site behind some houses
+Pickup.Create($111, #BRIBE, 15, 116.0, -1313.1, 4.4) //Through Underground Shopping mall (washinton)
+Pickup.Create($112, #BRIBE, 15, 393.7, -660.6, 10.7) //Middle of alleyways at back of Ocean Drive
+Pickup.Create($113, #BRIBE, 15, 470.7, 70.1, 10.8) //Just down from Pizza Hut in Vice Point
+Pickup.Create($114, #BRIBE, 15, 382.7, 364.1, 10.8) //In Alleyway in centre of Vice Point
+Pickup.Create($115, #BRIBE, 15, 422.4, 971.2, 12.1) //Near garages at Big Mall
+Pickup.Create($116, #BRIBE, 15, 89.1, 887.4, 10.5) //Down Unused street on Prawn Island
+Pickup.Create($117, #BRIBE, 15, -822.7, 1304.5, 11.7) //Between shortcut in downtown
+Pickup.Create($118, #BRIBE, 15, -900.69, 251.4, 17.1) //over jump at top of Little Hiati into Move Over Miami Sign
+Pickup.Create($119, #BRIBE, 15, -973.7, 61.0, 10.4) //in little haiti close by auntie poulets hut
+Pickup.Create($120, #BRIBE, 15, -937.9, -114.1, 17.0) //Over little aquaduct in little hiati
+Pickup.Create($121, #BRIBE, 15, -1015.9, -627.9, 11.2) //Through alleyway in little havana
+Pickup.Create($122, #BRIBE, 15, -906.3, -834.0, 15.7) //Over jump from main drag into car yard
+
+// get payphones
 024A: $292 = get_phone_at 36.90385 -1023.3 
 024A: $293 = get_phone_at 482.453 244.221 
 024A: $294 = get_phone_at 38.341 -1023.3 
 024A: $295 = get_phone_at -1482.801 -825.2587 
 024A: $296 = get_phone_at -976.7705 -530.5467 
-0180: set_on_mission_flag_to $ONMISSION 
-$585 = 304.5 // $ = float 
-$586 = 376.3 // $ = float 
-$587 = 12.7 // $ = float 
-$588 = -834.8 // $ = float 
-$589 = 1306.9 // $ = float 
-$590 = 11.0 // $ = float 
-$591 = 14.0 // $ = float 
-$592 = -1500.7 // $ = float 
-$593 = 12.7 // $ = float 
-$594 = 88.5 // $ = float 
-$595 = -804.7 // $ = float 
-$596 = 11.2 // $ = float 
-$597 = 531.4 // $ = float 
-$598 = 1273.7 // $ = float 
-$599 = 17.6 // $ = float 
-$600 = -560.1 // $ = float 
-$601 = 703.6 // $ = float 
-$602 = 20.5 // $ = float 
-$453 = 209.5 // $ = float 
-$454 = -1288.9 // $ = float 
-$455 = 12.4 // $ = float 
-$465 = 257.1 // $ = float 
-$466 = -231.7 // $ = float 
-$467 = 10.0 // $ = float 
-$549 = -1059.6 // $ = float 
-$550 = -274.5 // $ = float 
-$551 = 11.4 // $ = float 
-$552 = -1007.3 // $ = float 
-$553 = -869.9 // $ = float 
-$554 = 12.8 // $ = float 
-$555 = 15.2 // $ = float 
-$556 = 962.6 // $ = float 
-$557 = 10.9 // $ = float 
-$558 = -864.3 // $ = float 
-$559 = -576.6 // $ = float 
-$560 = 11.0 // $ = float 
-$561 = -1011.7 // $ = float 
-$562 = 203.9 // $ = float 
-$563 = 11.2 // $ = float 
-$564 = 487.2 // $ = float 
-$565 = -81.5 // $ = float 
-$566 = 11.4 // $ = float 
-$567 = -685.8 // $ = float 
-$568 = -1495.6 // $ = float 
-$569 = 12.5 // $ = float 
-$489 = -1003.1 // $ = float 
-$490 = 207.0 // $ = float 
-$491 = 10.0 // $ = float 
-$459 = -246.6 // $ = float 
-$460 = -1360.5 // $ = float 
-$461 = 7.3 // $ = float 
-$462 = -378.5 // $ = float 
-$463 = -551.3 // $ = float 
-$464 = 18.2 // $ = float 
-$468 = 463.9 // $ = float 
-$469 = -58.5 // $ = float 
-$470 = 10.5 // $ = float 
-$492 = -1101.1 // $ = float 
-$493 = 343.2 // $ = float 
-$494 = 10.2 // $ = float 
-$471 = -69.4 // $ = float 
-$472 = 932.7 // $ = float 
-$473 = 9.9 // $ = float 
-$474 = -1062.6 // $ = float 
-$475 = -278.8 // $ = float 
-$476 = 11.0 // $ = float 
-$456 = 119.2 // $ = float 
-$457 = -826.9 // $ = float 
-$458 = 9.7 // $ = float 
-$513 = 488.6 // $ = float 
-$514 = -75.4 // $ = float 
-$515 = 10.4 // $ = float 
-$477 = -597.3 // $ = float 
-$478 = 652.9 // $ = float 
-$479 = 10.0 // $ = float 
-$486 = -875.5 // $ = float 
-$487 = 1159.3 // $ = float 
-$488 = 10.2 // $ = float 
-$480 = -1170.0 // $ = float 
-$481 = -606.9 // $ = float 
-$482 = 10.6 // $ = float 
-$483 = -962.4 // $ = float 
-$484 = 143.0 // $ = float 
-$485 = 8.2 // $ = float 
-$570 = 99.5 // $ = float 
-$571 = -1468.5 // $ = float 
-$572 = 9.9 // $ = float 
-$573 = 428.4 // $ = float 
-$574 = 605.9 // $ = float 
-$575 = 12.2 // $ = float 
-$495 = -865.9 // $ = float 
-$496 = -571.9 // $ = float 
-$497 = 11.0 // $ = float 
-$576 = -1.9 // $ = float 
-$577 = 959.9 // $ = float 
-$578 = 10.9 // $ = float 
-$579 = -640.8 // $ = float 
-$580 = -1491.8 // $ = float 
-$581 = 13.7 // $ = float 
-$582 = -997.1 // $ = float 
-$583 = 189.8 // $ = float 
-$584 = 11.4 // $ = float 
-04AE: $421 = 4 // = constant 
-04AE: $432 = 22 // = constant 
-04AE: $417 = 9 // = constant 
-04AE: $418 = 8 // = constant 
-04AE: $419 = 6 // = constant 
-04AE: $420 = 7 // = constant 
-04AE: $422 = 13 // = constant 
-04AE: $423 = 10 // = constant 
-04AE: $424 = 15 // = constant 
-04AE: $425 = 29 // = constant 
-04AE: $426 = 24 // = constant 
-04AE: $427 = 11 // = constant 
-04AE: $428 = 23 // = constant 
-04AE: $429 = 14 // = constant 
-04AE: $430 = 17 // = constant 
-04AE: $431 = 30 // = constant 
-02A7: $223 = create_icon_marker_and_sphere $417 at $456 $457 $458 
-Marker.Disable($223)
-02A7: $241 = create_icon_marker_and_sphere $418 at 491.0 -77.7 10.4 
-Marker.Disable($241)
-02A7: $274 = create_icon_marker_and_sphere $427 at $477 $478 $479 
-Marker.Disable($274)
-02A7: $287 = create_icon_marker_and_sphere $428 at $486 $487 $488 
-Marker.Disable($287)
-02A7: $278 = create_icon_marker_and_sphere $429 at $480 $481 $482 
-Marker.Disable($278)
-02A7: $283 = create_icon_marker_and_sphere $430 at $483 $484 $485 
-Marker.Disable($283)
-02A7: $297 = create_icon_marker_and_sphere $431 at -853.0 -302.0 10.0 
-Marker.Disable($297)
-02A7: $247 = create_icon_marker_and_sphere $422 at $468 $469 $470 
-Marker.Disable($247)
-02A7: $253 = create_icon_marker_and_sphere $423 at $492 $493 $494 
-Marker.Disable($253)
-02A7: $256 = create_icon_marker_and_sphere $424 at $471 $472 $473 
-Marker.Disable($256)
-02A7: $265 = create_icon_marker_and_sphere $425 at $462 $463 $464 
-Marker.Disable($265)
-02A7: $271 = create_icon_marker_and_sphere $426 at $474 $475 $476 
-Marker.Disable($271)
-02A7: $234 = create_icon_marker_and_sphere $420 at $462 $463 $464 
-Marker.Disable($234)
-02A7: $243 = create_icon_marker_and_sphere $421 at $465 $466 $467 
-Marker.Disable($243)
-02A7: $306 = create_icon_marker_and_sphere $432 at $489 $490 $491 
-Marker.Disable($306)
-02A7: $228 = create_icon_marker_and_sphere $419 at $459 $460 $461 
-Marker.Disable($228)
-$604 = 10000 // $ = int 
-$605 = 2000 // $ = int 
-$607 = 0 // $ = int 
-$609 = 20000 // $ = int 
-$610 = 3000 // $ = int 
-$612 = 0 // $ = int 
-$614 = 30000 // $ = int 
-$617 = 4000 // $ = int 
-$618 = 0 // $ = int 
-$620 = 40000 // $ = int 
-$621 = 5000 // $ = int 
-$623 = 0 // $ = int 
-$625 = 50000 // $ = int 
-$626 = 1500 // $ = int 
-$628 = 0 // $ = int 
-$630 = 60000 // $ = int 
-$631 = 7000 // $ = int 
-$633 = 0 // $ = int 
-$635 = 70000 // $ = int 
-$636 = 8000 // $ = int 
-$639 = 120000 // $ = int 
-$640 = 10000 // $ = int 
-$642 = 0 // $ = int 
-$644 = 1000 // $ = int 
-$647 = 2500 // $ = int 
-$650 = 3000 // $ = int 
-$653 = 6000 // $ = int 
-$657 = 7000 // $ = int 
-$661 = 8000 // $ = int 
-$665 = 14000 // $ = int 
+
+// coordinates for asset purchase markers
+$585 = 304.5 // links view apartment purchase
+$586 = 376.3
+$587 = 12.7
+$588 = -834.8 // hyman condo purchase
+$589 = 1306.9
+$590 = 11.0
+$591 = 14.0 // ocean heights apartment purchase
+$592 = -1500.7
+$593 = 12.7
+$594 = 88.5 // 1102 washington street purchase
+$595 = -804.7
+$596 = 11.2
+$597 = 531.4 // 3321 vice point purchase
+$598 = 1273.7
+$599 = 17.6
+$600 = -560.1 // skumole shack purchase
+$601 = 703.6
+$602 = 20.5
+$573 = 428.4 // El Swanko Casa Purchase
+$574 = 605.9
+$575 = 12.2
+
+$561 = -1011.7 // Kaufman Cabs Purchase
+$562 = 203.9
+$563 = 11.2
+$567 = -685.8 // Boatyard Purchase
+$568 = -1495.6
+$569 = 12.5
+$564 = 487.2 // Malibu Purchase
+$565 = -81.5
+$566 = 11.4
+$549 = -1059.6 // Print Works Purchase
+$550 = -274.5
+$551 = 11.4
+$552 = -1007.3 // Sunshine Autos Purchase
+$553 = -869.9
+$554 = 12.8
+$555 = 15.2 // Film Studios Purchase
+$556 = 962.6
+$557 = 10.9
+$558 = -864.3 // Cherry Poppers Purchase
+$559 = -576.6
+$560 = 11.0
+$570 = 99.5 // Pole Position Purchase 
+$571 = -1468.5
+$572 = 9.9
+
+// coordinates for mission markers
+$453 = 209.5 // An Old Friend
+$454 = -1288.9
+$455 = 12.4
+$465 = 257.1 // Avery
+$466 = -231.7
+$467 = 10.0
+$459 = -246.6 // Cortez
+$460 = -1360.5
+$461 = 7.3
+$489 = -1003.1 // Kaufman Cabs
+$490 = 207.0
+$491 = 10.0
+$462 = -378.5 // Diaz
+$463 = -551.3
+$464 = 18.2
+$468 = 463.9 // Malibu
+$469 = -58.5
+$470 = 10.5
+$492 = -1101.1 // Phil
+$493 = 343.2
+$494 = 10.2
+$471 = -69.4 // Film Studio
+$472 = 932.7
+$473 = 9.9
+$474 = -1062.6 // Print Works
+$475 = -278.8
+$476 = 11.0
+$456 = 119.2 // Lawyer
+$457 = -826.9
+$458 = 9.7
+$477 = -597.3 // Biker
+$478 = 652.9
+$479 = 10.0
+$486 = -875.5 // Love Fist
+$487 = 1159.3
+$488 = 10.2
+$480 = -1170.0 // Umberto
+$481 = -606.9
+$482 = 10.6
+$483 = -962.4 // Auntie Poulet
+$484 = 143.0
+$485 = 8.2
+$495 = -865.9 // Distribution
+$496 = -571.9
+$497 = 11.0
+
+// originally from Mission 0
+$510 = -244.6 // Rub Out
+$511 = -491.3 
+$512 = 10.6 
+$516 = 36.798 // Payphone 1
+$517 = -1024.404 
+$518 = 9.451 
+$519 = 482.5293 // Payphone 2
+$520 = 244.276 
+$521 = 10.09 
+$522 = 38.244 // Payphone 3
+$523 = -1024.251 
+$524 = 9.451 
+$525 = -1481.872 // Payphone 4
+$526 = -825.3049 
+$527 = 13.8777 
+$528 = -978.0145 // Payphone 5
+$529 = -530.7043 
+$530 = 9.9513 
+
+// misc coords
+$513 = 488.6 // Malibu Club Main Door (used in Back Alley Brawl)
+$514 = -75.4
+$515 = 10.4
+
+// money generator pickup coordinates
+$576 = -1.9 // Film Studio Money Generator
+$577 = 959.9
+$578 = 10.9
+$579 = -640.8 // Boatyard Money Generator
+$580 = -1491.8
+$581 = 13.7
+$582 = -997.1 // Kaufman Cabs Money Generator
+$583 = 189.8
+$584 = 11.4
+
+// Blip Types
+04AE: $421 = 4 // A
+04AE: $432 = 22 // Kaufman
+04AE: $417 = 9 // L
+04AE: $418 = 8 // K
+04AE: $419 = 6 // C
+04AE: $420 = 7 // D
+04AE: $422 = 13 // Malibu
+04AE: $423 = 10 // P
+04AE: $424 = 15 // Film
+04AE: $425 = 29 // V
+04AE: $426 = 24 // Printworks
+04AE: $427 = 11 // Bikers
+04AE: $428 = 23 // LoveFist
+04AE: $429 = 14 // Cubans
+04AE: $430 = 17 // Haitians
+04AE: $431 = 30 // Phone
+
+// This all seems redundant, as these are created and then instantly disabled, only to be created from scratch again later
+// 02A7: $223 = create_icon_marker_and_sphere $417 at $456 $457 $458 
+// Marker.Disable($223)
+// 02A7: $241 = create_icon_marker_and_sphere $418 at 491.0 -77.7 10.4 
+// Marker.Disable($241)
+// 02A7: $274 = create_icon_marker_and_sphere $427 at $477 $478 $479 
+// Marker.Disable($274)
+// 02A7: $287 = create_icon_marker_and_sphere $428 at $486 $487 $488 
+// Marker.Disable($287)
+// 02A7: $278 = create_icon_marker_and_sphere $429 at $480 $481 $482 
+// Marker.Disable($278)
+// 02A7: $283 = create_icon_marker_and_sphere $430 at $483 $484 $485 
+// Marker.Disable($283)
+// 02A7: $297 = create_icon_marker_and_sphere $431 at -853.0 -302.0 10.0 
+// Marker.Disable($297)
+// 02A7: $247 = create_icon_marker_and_sphere $422 at $468 $469 $470 
+// Marker.Disable($247)
+// 02A7: $253 = create_icon_marker_and_sphere $423 at $492 $493 $494 
+// Marker.Disable($253)
+// 02A7: $256 = create_icon_marker_and_sphere $424 at $471 $472 $473 
+// Marker.Disable($256)
+// 02A7: $265 = create_icon_marker_and_sphere $425 at $462 $463 $464 
+// Marker.Disable($265)
+// 02A7: $271 = create_icon_marker_and_sphere $426 at $474 $475 $476 
+// Marker.Disable($271)
+// 02A7: $234 = create_icon_marker_and_sphere $420 at $462 $463 $464 
+// Marker.Disable($234)
+// 02A7: $243 = create_icon_marker_and_sphere $421 at $465 $466 $467 
+// Marker.Disable($243)
+// 02A7: $306 = create_icon_marker_and_sphere $432 at $489 $490 $491 
+// Marker.Disable($306)
+// 02A7: $228 = create_icon_marker_and_sphere $419 at $459 $460 $461 
+// Marker.Disable($228)
+
+$605 = 2000 // Boatyard Revenue
+$607 = 0 // Boatyard Completion Bool
+$610 = 3000 // Cherry Poppers Revenue
+$612 = 0 //  Cherry Poppers Completion Bool
+$617 = 4000 // Pole Position Revenue
+$618 = 0 // Pole Position Completion Bool
+$621 = 5000 // Kaufman Revenue
+$623 = 0 // Kaufman Completion Bool
+$626 = 1500 // SSA Revenue
+$628 = 0 // SSA Completion Bool (1st list)
+$631 = 7000 // Film Studio Revenue
+$633 = 0 // Film Studio Completion Bool
+$636 = 8000 // PW Revenue
+$640 = 10000 // Malibu Revenue
+$642 = 0 // Malibu Completion Bool
+
+// Asset Costs
+$644 = 10 // Skumole Shack Cost
+$647 = 25 // 3321 Vice Point Cost
+$650 = 30 // 1102 Washington Street Cost
+$653 = 60 // Links View Apt Cost
+$657 = 70 // Ocean Heighs Apt Cost
+$661 = 80 // El Swanko Casa Cost
+$665 = 140 // Hyman Condo Cost
+$604 = 100 // Boatyard Cost
+$609 = 200 // Cherry Poppers Cost
+$614 = 300 // Pole Position Cost
+$620 = 400 // Kaufman Cost
+$625 = 500 // SSA Cost
+$630 = 600 // Film Studio Cost
+$635 = 700 // PW Cost
+$639 = 1200 // Malibu Cost
+
 Pickup.Create($670, #INFO, 3, 493.5, 703.1, 12.1)
 Pickup.Create($671, #INFO, 3, -108.3, -974.4, 10.4)
 Pickup.Create($672, #INFO, 3, 508.9, 506.8, 11.3)
@@ -250,27 +281,28 @@ Pickup.Create($673, #INFO, 3, 398.8, -469.7, 11.7)
 0517: $679 = create_unavailable_asset_pickup 'BANK_NO' at $564 $565 $566  // You cannot buy The Malibu at this time, come back later.
 0517: $680 = create_unavailable_asset_pickup 'BOAT_NO' at $567 $568 $569  // You cannot buy the Boatyard at this time, come back later.
 0517: $615 = create_unavailable_asset_pickup 'STRP_NO' at $570 $571 $572  // You cannot buy the Stripclub at this time, come back later.
-0518: $662 = create_available_asset_pickup 'NBMN_L' at $573 $574 $575 price $661  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
-0570: $660 = create_asset_radar_marker_with_icon 25 at $573 $574 $575 
-Marker.Disable($660)
-0518: $654 = create_available_asset_pickup 'LNKV_L' at $585 $586 $587 price $653  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
-0570: $652 = create_asset_radar_marker_with_icon 25 at $585 $586 $587 
-Marker.Disable($652)
-0518: $666 = create_available_asset_pickup 'HYCO_L' at $588 $589 $590 price $665  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Hyman Condo for $~1~
-0570: $664 = create_asset_radar_marker_with_icon 25 at $588 $589 $590 
-Marker.Disable($664)
-0518: $658 = create_available_asset_pickup 'OCHE_L' at $591 $592 $593 price $657  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Heights Apartment for $~1~
-0570: $656 = create_asset_radar_marker_with_icon 25 at $591 $592 $593 
-Marker.Disable($656)
-0518: $651 = create_available_asset_pickup 'WASH_L' at $594 $595 $596 price $650  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
-0570: $649 = create_asset_radar_marker_with_icon 25 at $594 $595 $596 
-Marker.Disable($649)
-0518: $648 = create_available_asset_pickup 'VCPT_L' at $597 $598 $599 price $647  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
-0570: $646 = create_asset_radar_marker_with_icon 25 at $597 $598 $599 
-Marker.Disable($646)
-0518: $645 = create_available_asset_pickup 'SKUM_L' at $600 $601 $602 price $644  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
-0570: $643 = create_asset_radar_marker_with_icon 25 at $600 $601 $602 
-Marker.Disable($643)
+0518: $HOUSE0_PICKUP = create_available_asset_pickup 'SKUM_L' at $600 $601 $602 price $644  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
+0518: $HOUSE1_PICKUP = create_available_asset_pickup 'VCPT_L' at $597 $598 $599 price $647  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
+0518: $HOUSE2_PICKUP = create_available_asset_pickup 'WASH_L' at $594 $595 $596 price $650  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
+0518: $HOUSE3_PICKUP = create_available_asset_pickup 'OCHE_L' at $591 $592 $593 price $657  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Heights Apartment for $~1~
+0518: $HOUSE4_PICKUP = create_available_asset_pickup 'HYCO_L' at $588 $589 $590 price $665  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Hyman Condo for $~1~
+// 0518: $HOUSE5_PICKUP = 
+0518: $HOUSE6_PICKUP = create_available_asset_pickup 'LNKV_L' at $585 $586 $587 price $653  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
+0518: $HOUSE7_PICKUP = create_available_asset_pickup 'NBMN_L' at $573 $574 $575 price $661  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
+// 0570: $660 = create_asset_radar_marker_with_icon 25 at $573 $574 $575 
+// Marker.Disable($660)
+// 0570: $652 = create_asset_radar_marker_with_icon 25 at $585 $586 $587 
+// Marker.Disable($652)
+// 0570: $664 = create_asset_radar_marker_with_icon 25 at $588 $589 $590 
+// Marker.Disable($664)
+// 0570: $656 = create_asset_radar_marker_with_icon 25 at $591 $592 $593 
+// Marker.Disable($656)
+// 0570: $649 = create_asset_radar_marker_with_icon 25 at $594 $595 $596 
+// Marker.Disable($649)
+// 0570: $646 = create_asset_radar_marker_with_icon 25 at $597 $598 $599 
+// Marker.Disable($646)
+// 0570: $643 = create_asset_radar_marker_with_icon 25 at $600 $601 $602 
+// Marker.Disable($643)
 0219: $681 = create_garage_type 5 door -914.129 -1263.54 10.706 to -906.3 -1266.9 14.421 depth -907.137 -1246.626 
 0219: $682 = create_garage_type 5 door -1014.341 -857.732 6.325 to -1014.341 -841.532 10.885 depth -1001.315 -857.732 
 03BB: set_garage $682 door_type_to_swing_open 
@@ -374,13 +406,14 @@ start_new_script @HELI3
 start_new_script @HELI4 
 start_new_script @STADIUM 
 start_new_script @ARMYBAS 
-start_new_script @NBMNBUY 
-start_new_script @LNKVBY 
-start_new_script @HYCOBY 
-start_new_script @OCHEBY 
-start_new_script @WASHBY 
-start_new_script @SKUMBY 
-start_new_script @VCPTBY 
+start_new_script @HOUSEBY
+// start_new_script @NBMNBUY 
+// start_new_script @LNKVBY 
+// start_new_script @HYCOBY 
+// start_new_script @OCHEBY 
+// start_new_script @WASHBY 
+// start_new_script @SKUMBY 
+// start_new_script @VCPTBY 
 create_thread_wb @HJ 
 create_thread_wb @USJ 
 create_thread_wb @AMMU 

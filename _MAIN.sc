@@ -46,8 +46,6 @@ Object.RemoveFromMissionCleanupList($719)
 049D: attach_scripted_file $722 with_object $718 
 049D: attach_scripted_file $722 with_object $719 
 049E: set_scripted_file $722 speed_to 0.0 
-wait 0 
-wait 0 
 Object.Init($721, #YACHT_CHUNK_KB, $448, $449, $450)
 Object.RemoveFromMissionCleanupList($721)
 Object.Init($720, #YT_GANGPLNK_TMP, $448, $449, $450)
@@ -197,10 +195,10 @@ $HOUSE6_Z = 12.7
 $HOUSE0_COST = 1000 // Skumole Shack Cost
 $HOUSE1_COST = 2500 // 3321 Vice Point Cost
 $HOUSE2_COST = 3000 // 1102 Washington Street Cost
-$HOUSE6_COST = 6000 // Links View Apt Cost
 $HOUSE3_COST = 7000 // Ocean Heighs Apt Cost
-$HOUSE5_COST = 8000 // El Swanko Casa Cost
 $HOUSE4_COST = 14000 // Hyman Condo Cost
+$HOUSE5_COST = 8000 // El Swanko Casa Cost
+$HOUSE6_COST = 6000 // Links View Apt Cost
 0518: $HOUSE0_PICKUP = create_available_asset_pickup 'SKUM_L' at $HOUSE0_X $HOUSE0_Y $HOUSE0_Z price $HOUSE0_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
 0518: $HOUSE1_PICKUP = create_available_asset_pickup 'VCPT_L' at $HOUSE1_X $HOUSE1_Y $HOUSE1_Z price $HOUSE1_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
 0518: $HOUSE2_PICKUP = create_available_asset_pickup 'WASH_L' at $HOUSE2_X $HOUSE2_Y $HOUSE2_Z price $HOUSE2_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
@@ -343,6 +341,8 @@ $639 = 120000 // Malibu Cost
 057A: set_garage $686 max_cars_to 2 
 
 // =========================== Start Missions and scripts ===========================
+wait 0 
+wait 0 // Game crashes upon restart without these
 start_mission 1  // Intro
 start_new_script @O4X4_1 
 start_new_script @TAXI_L 

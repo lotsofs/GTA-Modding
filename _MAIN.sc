@@ -192,6 +192,9 @@ $HOUSE5_Z = 12.2
 $HOUSE6_X = 304.5 // links view apartment purchase
 $HOUSE6_Y = 376.3
 $HOUSE6_Z = 12.7
+$HOUSE7_X = -1247.045 // junkyard
+$HOUSE7_Y = 87.9088 
+$HOUSE7_Z = 11.4567
 $HOUSE0_COST = 1000 // Skumole Shack Cost
 $HOUSE1_COST = 2500 // 3321 Vice Point Cost
 $HOUSE2_COST = 3000 // 1102 Washington Street Cost
@@ -199,6 +202,7 @@ $HOUSE3_COST = 7000 // Ocean Heighs Apt Cost
 $HOUSE4_COST = 14000 // Hyman Condo Cost
 $HOUSE5_COST = 8000 // El Swanko Casa Cost
 $HOUSE6_COST = 6000 // Links View Apt Cost
+$HOUSE7_COST = 2000 // Junkyard
 0518: $HOUSE0_PICKUP = create_available_asset_pickup 'SKUM_L' at $HOUSE0_X $HOUSE0_Y $HOUSE0_Z price $HOUSE0_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
 0518: $HOUSE1_PICKUP = create_available_asset_pickup 'VCPT_L' at $HOUSE1_X $HOUSE1_Y $HOUSE1_Z price $HOUSE1_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
 0518: $HOUSE2_PICKUP = create_available_asset_pickup 'WASH_L' at $HOUSE2_X $HOUSE2_Y $HOUSE2_Z price $HOUSE2_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
@@ -206,6 +210,7 @@ $HOUSE6_COST = 6000 // Links View Apt Cost
 0518: $HOUSE4_PICKUP = create_available_asset_pickup 'HYCO_L' at $HOUSE4_X $HOUSE4_Y $HOUSE4_Z price $HOUSE4_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Hyman Condo for $~1~
 0518: $HOUSE5_PICKUP = create_available_asset_pickup 'NBMN_L' at $HOUSE5_X $HOUSE5_Y $HOUSE5_Z price $HOUSE5_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
 0518: $HOUSE6_PICKUP = create_available_asset_pickup 'LNKV_L' at $HOUSE6_X $HOUSE6_Y $HOUSE6_Z price $HOUSE6_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
+0518: $HOUSE7_PICKUP = create_available_asset_pickup 'SKUM_L' at $HOUSE7_X $HOUSE7_Y $HOUSE7_Z price $HOUSE7_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
 
 // =========================== Assets: ===========================
 // coordinates for asset purchase markers

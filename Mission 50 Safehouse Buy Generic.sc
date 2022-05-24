@@ -186,7 +186,7 @@ jump @HOUSBUY_fadeout
 :HOUSBUY_ishouse6
 if
    $HOUSETOBUY == 6	// Links View
-jf @HOUSBUY_nohouse
+jf @HOUSBUY_ishouse7
 $CAMERAPOSX = 241.4097 
 $CAMERAPOSY = 420.0691 
 $CAMERAPOSZ = 10.388
@@ -211,6 +211,30 @@ $GARAGECAMERATARGETZ = 14.5534
 0542: add_property 9 to_property_own_stats 
 02FA: garage $655 change_to_type 26 
 $HOUSE6_BOUGHT = 1
+// start_new_script @SAVE7 
+jump @HOUSBUY_fadeout
+
+:HOUSBUY_ishouse7
+if
+   $HOUSETOBUY == 7	// Junkyard
+jf @HOUSBUY_nohouse
+$CAMERAPOSX = -1290.5977 
+$CAMERAPOSY = 86.6051 
+$CAMERAPOSZ = 31.3012
+$CAMERATARGETX = -1263.4088 
+$CAMERATARGETY = 84.0854 
+$CAMERATARGETZ = 11.88
+$PLAYERPUTATX = -1249.6212 
+$PLAYERPUTATY = 86.3196 
+$PLAYERPUTATZ = 10.4558
+$PLAYERPUTATA = 119.799
+$HOUSEHASGARAGE = 0
+0084: $HOUSECOST = $HOUSE7_COST
+0570: $HOUSE7_BLIP = create_asset_radar_marker_with_icon 19 at $HOUSE7_X $HOUSE7_Y $HOUSE7_Z 
+018B: set_marker $HOUSE7_BLIP display 2 
+// 0542: add_property 9 to_property_own_stats 
+// 02FA: garage $655 change_to_type 26 
+$HOUSE7_BOUGHT = 1
 // start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
@@ -287,8 +311,15 @@ jf @HOUSBUY_postfadehouse6
 :HOUSBUY_postfadehouse6
 if
    $HOUSETOBUY == 6	// Links View
-jf @HOUSBUY_postfadeincontinue
+jf @HOUSBUY_postfadehouse7
 01E3: text_1number_styled 'LNKVBUY' number $HOUSECOST time 5000 style 6  // Links View Apartment purchased: $~1~
+
+:HOUSBUY_postfadehouse7
+if
+   $HOUSETOBUY == 7	// Junkyard
+jf @HOUSBUY_postfadeincontinue
+01E3: text_1number_styled 'SKUMBUY' number $HOUSECOST time 5000 style 6  // Links View Apartment purchased: $~1~
+
 
 :HOUSBUY_postfadeincontinue
 wait 2000 

@@ -67,17 +67,17 @@ start_mission 50  // House Buy
 if and
    Pickup.Picked_up($HOUSE6_PICKUP)
    $HOUSE6_BOUGHT == 0
-jf @HOUSEBY_continue
+jf @HOUSEBY_7
 $HOUSETOBUY = 6
 start_mission 50  // House Buy
 
-// :HOUSEBY_7
-// if and
-//    Pickup.Picked_up($HOUSE7_PICKUP)
-//    $HOUSE7_BOUGHT == 0
-// jf @HOUSEBY_continue
-// $HOUSETOBUY = 7
-// start_mission 50  // House Buy
+:HOUSEBY_7
+if and
+   Pickup.Picked_up($HOUSE7_PICKUP)
+   $HOUSE7_BOUGHT == 0
+jf @HOUSEBY_continue
+$HOUSETOBUY = 7
+start_mission 50  // House Buy
 
 :HOUSEBY_continue
 jump @HOUSEBY_start

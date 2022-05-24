@@ -1,9 +1,12 @@
+//-------------Mission 50---------------
+// Originally: House Buy
+
 :HOUSBUY
 script_name 'HOUSBUY' 
 $ONMISSION = 1
 wait 0 
 030C: progress_made += 1 
-$HOUSESBOUGHT += 1
+$HOUSES_BOUGHT += 1
 0169: set_fade_color 0 0 1 
 fade 0 500 
 Player.CanMove($PLAYER_CHAR, False)
@@ -25,12 +28,12 @@ $PLAYERPUTATY = 705.4
 $PLAYERPUTATZ = 19.8
 $PLAYERPUTATA = 243.0
 $HOUSEHASGARAGE = 0
-0084: $HOUSECOST = $644
+0084: $HOUSECOST = $HOUSE0_COST
 // Marker.Disable($HOUSE0_MARKER)
-0570: $HOUSE0_MARKER = create_asset_radar_marker_with_icon 19 at $600 $601 $602 
+0570: $HOUSE0_MARKER = create_asset_radar_marker_with_icon 19 at $HOUSE0_X $HOUSE0_Y $HOUSE0_Z 
 018B: set_marker $HOUSE0_MARKER display 2 
 0542: add_property 13 to_property_own_stats 
-$HOUSE0BOUGHT = 1
+$HOUSE0_BOUGHT = 1
 // start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
@@ -49,12 +52,12 @@ $PLAYERPUTATY = 1272.155
 $PLAYERPUTATZ = 16.822
 $PLAYERPUTATA = 131.5277
 $HOUSEHASGARAGE = 0
-0084: $HOUSECOST = $647
+0084: $HOUSECOST = $HOUSE1_COST
 // Marker.Disable($646)
-0570: $646 = create_asset_radar_marker_with_icon 19 at $597 $598 $599 
+0570: $646 = create_asset_radar_marker_with_icon 19 at $HOUSE1_X $HOUSE1_Y $HOUSE1_Z
 018B: set_marker $646 display 2 
 0542: add_property 8 to_property_own_stats 
-$HOUSE1BOUGHT = 1
+$HOUSE1_BOUGHT = 1
 // start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
@@ -73,12 +76,12 @@ $PLAYERPUTATY = -806.1213
 $PLAYERPUTATZ = 10.3349
 $PLAYERPUTATA = 238.8605
 $HOUSEHASGARAGE = 0
-0084: $HOUSECOST = $650
+0084: $HOUSECOST = $HOUSE2_COST
 // Marker.Disable($649)
-0570: $649 = create_asset_radar_marker_with_icon 19 at $594 $595 $596
+0570: $649 = create_asset_radar_marker_with_icon 19 at $HOUSE2_X $HOUSE2_Y $HOUSE2_Z
 018B: set_marker $649 display 2 
 0542: add_property 11 to_property_own_stats 
-$HOUSE2BOUGHT = 1
+$HOUSE2_BOUGHT = 1
 // start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
@@ -103,13 +106,13 @@ $GARAGECAMERAPOSZ = 18.6329
 $GARAGECAMERATARGETX = 18.0802 
 $GARAGECAMERATARGETY = -1468.512 
 $GARAGECAMERATARGETZ = 18.2106
-0084: $HOUSECOST = $657
+0084: $HOUSECOST = $HOUSE3_COST
 // Marker.Disable($656)
-0570: $656 = create_asset_radar_marker_with_icon 19 at $591 $592 $593
+0570: $656 = create_asset_radar_marker_with_icon 19 at $HOUSE3_X $HOUSE3_Y $HOUSE3_Z
 018B: set_marker $656 display 2 
 0542: add_property 12 to_property_own_stats 
 02FA: garage $659 change_to_type 25 
-$HOUSE3BOUGHT = 1
+$HOUSE3_BOUGHT = 1
 // start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
@@ -134,15 +137,15 @@ $GARAGECAMERAPOSZ = 11.4866
 $GARAGECAMERATARGETX = -847.6996
 $GARAGECAMERATARGETY = 1293.611
 $GARAGECAMERATARGETZ = 11.5998
-0084: $HOUSECOST = $665
+0084: $HOUSECOST = $HOUSE4_COST
 // Marker.Disable($664)
-0570: $664 = create_asset_radar_marker_with_icon 19 at $588 $589 $590 
+0570: $664 = create_asset_radar_marker_with_icon 19 at $HOUSE4_X $HOUSE4_Y $HOUSE4_Z
 018B: set_marker $664 display 2 
 0542: add_property 14 to_property_own_stats 
 02FA: garage $667 change_to_type 17 
 02FA: garage $668 change_to_type 18 
 02FA: garage $669 change_to_type 24
-$HOUSE4BOUGHT = 1
+$HOUSE4_BOUGHT = 1
 $1300 = 1 // $ = int 
 $1795 = 1 // $ = int 
 055B: $1298 = create_clothes_pickup 1 at -820.2 1364.1 66.4 
@@ -151,47 +154,8 @@ jump @HOUSBUY_fadeout
 
 :HOUSBUY_ishouse5
 if
-   $HOUSETOBUY == 5	// 
+   $HOUSETOBUY == 5	// El Swanko Casa
 jf @HOUSBUY_ishouse6
-$HOUSE5BOUGHT = 1
-// null house
-jump @HOUSBUY_fadeout
-
-:HOUSBUY_ishouse6
-if
-   $HOUSETOBUY == 6	// Links View
-jf @HOUSBUY_ishouse7
-$CAMERAPOSX = 241.4097 
-$CAMERAPOSY = 420.0691 
-$CAMERAPOSZ = 10.388
-$CAMERATARGETX = 242.141 
-$CAMERATARGETY = 419.4232 
-$CAMERATARGETZ = 10.6071
-$PLAYERPUTATX = 306.5728 
-$PLAYERPUTATY = 376.2928 
-$PLAYERPUTATZ = 12.1856
-$PLAYERPUTATA = 276.3156 
-$HOUSEHASGARAGE = 1
-$GARAGECAMERAPOSX = 313.6496 
-$GARAGECAMERAPOSY = 390.976 
-$GARAGECAMERAPOSZ = 14.5314
-$GARAGECAMERATARGETX = 313.0024 
-$GARAGECAMERATARGETY = 391.738 
-$GARAGECAMERATARGETZ = 14.5534
-0084: $HOUSECOST = $653
-// Marker.Disable($652)
-0570: $652 = create_asset_radar_marker_with_icon 19 at $585 $586 $587 
-018B: set_marker $652 display 2 
-0542: add_property 9 to_property_own_stats 
-02FA: garage $655 change_to_type 26 
-$HOUSE6BOUGHT = 1
-// start_new_script @SAVE7 
-jump @HOUSBUY_fadeout
-
-:HOUSBUY_ishouse7
-if
-   $HOUSETOBUY == 7	// El Swanko Casa
-jf @HOUSBUY_nohouse
 $CAMERAPOSX = 415.9304 
 $CAMERAPOSY = 640.0891 
 $CAMERAPOSZ = 12.9833
@@ -209,13 +173,44 @@ $GARAGECAMERAPOSZ = 15.3209
 $GARAGECAMERATARGETX = 428.6758 
 $GARAGECAMERATARGETY = 650.2003 
 $GARAGECAMERATARGETZ = 15.1346
-0084: $HOUSECOST = $661
+0084: $HOUSECOST = $HOUSE5_COST
 // Marker.Disable($660)
-0570: $660 = create_asset_radar_marker_with_icon 19 at $573 $574 $575 
+0570: $660 = create_asset_radar_marker_with_icon 19 at $HOUSE5_X $HOUSE5_Y $HOUSE5_Z 
 018B: set_marker $660 display 2 
 0542: add_property 10 to_property_own_stats 
 02FA: garage $663 change_to_type 16 
-$HOUSE7BOUGHT = 1
+$HOUSE5_BOUGHT = 1
+// start_new_script @SAVE7 
+jump @HOUSBUY_fadeout
+
+:HOUSBUY_ishouse6
+if
+   $HOUSETOBUY == 6	// Links View
+jf @HOUSBUY_nohouse
+$CAMERAPOSX = 241.4097 
+$CAMERAPOSY = 420.0691 
+$CAMERAPOSZ = 10.388
+$CAMERATARGETX = 242.141 
+$CAMERATARGETY = 419.4232 
+$CAMERATARGETZ = 10.6071
+$PLAYERPUTATX = 306.5728 
+$PLAYERPUTATY = 376.2928 
+$PLAYERPUTATZ = 12.1856
+$PLAYERPUTATA = 276.3156 
+$HOUSEHASGARAGE = 1
+$GARAGECAMERAPOSX = 313.6496 
+$GARAGECAMERAPOSY = 390.976 
+$GARAGECAMERAPOSZ = 14.5314
+$GARAGECAMERATARGETX = 313.0024 
+$GARAGECAMERATARGETY = 391.738 
+$GARAGECAMERATARGETZ = 14.5534
+0084: $HOUSECOST = $HOUSE6_COST
+// Marker.Disable($652)
+0570: $652 = create_asset_radar_marker_with_icon 19 at $HOUSE6_X $HOUSE6_Y $HOUSE6_Z 
+018B: set_marker $652 display 2 
+0542: add_property 9 to_property_own_stats 
+02FA: garage $655 change_to_type 26 
+$HOUSE6_BOUGHT = 1
 // start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
@@ -285,21 +280,15 @@ jf @HOUSBUY_postfadehouse5
 
 :HOUSBUY_postfadehouse5
 if
-   $HOUSETOBUY == 5	// 
+   $HOUSETOBUY == 5	// El Swanko Casa
 jf @HOUSBUY_postfadehouse6
-// null house
+01E3: text_1number_styled 'NBMNBUY' number $HOUSECOST time 5000 style 6  // El Swanko Casa purchased: $~1~
 
 :HOUSBUY_postfadehouse6
 if
    $HOUSETOBUY == 6	// Links View
-jf @HOUSBUY_postfadehouse7
-01E3: text_1number_styled 'LNKVBUY' number $HOUSECOST time 5000 style 6  // Links View Apartment purchased: $~1~
-
-:HOUSBUY_postfadehouse7
-if
-   $HOUSETOBUY == 7	// El Swanko Casa
 jf @HOUSBUY_postfadeincontinue
-01E3: text_1number_styled 'NBMNBUY' number $HOUSECOST time 5000 style 6  // El Swanko Casa purchased: $~1~
+01E3: text_1number_styled 'LNKVBUY' number $HOUSECOST time 5000 style 6  // Links View Apartment purchased: $~1~
 
 :HOUSBUY_postfadeincontinue
 wait 2000 

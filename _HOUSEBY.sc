@@ -1,10 +1,12 @@
+// ==================== HOUSEBY =========================
+
 :HOUSEBY
 script_name 'HOUSEBY'
 
 :HOUSEBY_start
 wait $DEFAULT_WAIT_TIME
 if
-   $HOUSES_BOUGHT > 7
+   $HOUSES_BOUGHT > 9
 jf @HOUSEBY_checks
 terminate_this_script
 
@@ -75,9 +77,26 @@ start_mission 50  // House Buy
 if and
    Pickup.Picked_up($HOUSE7_PICKUP)
    $HOUSE7_BOUGHT == 0
-jf @HOUSEBY_continue
+jf @HOUSEBY_8
 $HOUSETOBUY = 7   // Junkyard
 start_mission 50  // House Buy
+
+:HOUSEBY_8
+if and
+   Pickup.Picked_up($HOUSE8_PICKUP)
+   $HOUSE8_BOUGHT == 0
+jf @HOUSEBY_9
+$HOUSETOBUY = 8   // Lance's
+start_mission 50  // House Buy
+
+:HOUSEBY_9
+if and
+   Pickup.Picked_up($HOUSE9_PICKUP)
+   $HOUSE9_BOUGHT == 0
+jf @HOUSEBY_continue
+$HOUSETOBUY = 9   // Estrella
+start_mission 50  // House Buy
+
 
 :HOUSEBY_continue
 jump @HOUSEBY_start

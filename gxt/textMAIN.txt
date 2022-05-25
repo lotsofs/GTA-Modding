@@ -191,6 +191,10 @@ CAR_L     Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Car Showr
 CAR_NO    You cannot buy the Car Showroom at this time, come back later.
 CAR_T     Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Car Showroom for $~1~
 CDERROR   Error reading the Grand Theft Auto: Vice City DVD
+CESTBUY   Casa Estrella purchased: $~1~
+CEST_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Casa Estrella for $~1~
+CEST_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Casa Estrella for $~1~
+CEST_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Casa Estrella for $~1~
 CHAINSA   Chainsaw
 CHASE     Highest media attention
 CHASE1    Ignored
@@ -1944,6 +1948,10 @@ NOV       Nov
 NO_PCCD   Please insert your GTA Vice City CD, or press ESC to cancel
 NUMBER    ~1~
 NUMSHV    Safehouse visits
+OCDRBUY   Ocean Drive Apartment purchased: $~1~
+OCDR_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Drive Apartment for $~1~
+OCDR_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Drive Apartment for $~1~
+OCDR_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Drive Apartment for $~1~
 OCEANIC   Oceanic
 OCHEBUY   Ocean Heights Apartment purchased: $~1~
 OCHE_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Heights Apartment for $~1~
@@ -2265,6 +2273,8 @@ STPR_13   Ocean Heights Apartment
 STPR_14   Skumole Shack
 STPR_15   Hyman Condo
 STPR_16   City Scrap Shack
+STPR_17   Ocean Drive Apartment
+STPR_18   Casa Estrella
 STPR_2    Print Works
 STPR_3    Film Studio
 STPR_4    Ice Cream Factory

@@ -34,7 +34,6 @@ $HOUSEHASGARAGE = 0
 018B: set_marker $HOUSE0_MARKER display 2 
 0542: add_property 13 to_property_own_stats 
 $HOUSE0_BOUGHT = 1
-// start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
 :HOUSBUY_ishouse1
@@ -58,7 +57,6 @@ $HOUSEHASGARAGE = 0
 018B: set_marker $646 display 2 
 0542: add_property 8 to_property_own_stats 
 $HOUSE1_BOUGHT = 1
-// start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
 :HOUSBUY_ishouse2
@@ -82,7 +80,6 @@ $HOUSEHASGARAGE = 0
 018B: set_marker $649 display 2 
 0542: add_property 11 to_property_own_stats 
 $HOUSE2_BOUGHT = 1
-// start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
 :HOUSBUY_ishouse3
@@ -113,7 +110,6 @@ $GARAGECAMERATARGETZ = 18.2106
 0542: add_property 12 to_property_own_stats 
 02FA: garage $659 change_to_type 25 
 $HOUSE3_BOUGHT = 1
-// start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
 :HOUSBUY_ishouse4
@@ -149,7 +145,6 @@ $HOUSE4_BOUGHT = 1
 $1300 = 1 // $ = int 
 $1795 = 1 // $ = int 
 055B: $1298 = create_clothes_pickup 1 at -820.2 1364.1 66.4 
-// start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
 :HOUSBUY_ishouse5
@@ -180,7 +175,6 @@ $GARAGECAMERATARGETZ = 15.1346
 0542: add_property 10 to_property_own_stats 
 02FA: garage $663 change_to_type 16 
 $HOUSE5_BOUGHT = 1
-// start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
 :HOUSBUY_ishouse6
@@ -211,13 +205,12 @@ $GARAGECAMERATARGETZ = 14.5534
 0542: add_property 9 to_property_own_stats 
 02FA: garage $655 change_to_type 26 
 $HOUSE6_BOUGHT = 1
-// start_new_script @SAVE7 
 jump @HOUSBUY_fadeout
 
 :HOUSBUY_ishouse7
 if
    $HOUSETOBUY == 7	// Junkyard
-jf @HOUSBUY_nohouse
+jf @HOUSBUY_ishouse8
 $CAMERAPOSX = -1290.5977 
 $CAMERAPOSY = 96.6051 
 $CAMERAPOSZ = 31.3012
@@ -235,7 +228,52 @@ $HOUSEHASGARAGE = 0
 0542: add_property 15 to_property_own_stats 
 // 02FA: garage $655 change_to_type 26 
 $HOUSE7_BOUGHT = 1
-// start_new_script @SAVE7 
+jump @HOUSBUY_fadeout
+
+:HOUSBUY_ishouse8
+if
+   $HOUSETOBUY == 8	// Lance's
+jf @HOUSBUY_ishouse9
+$CAMERAPOSX = -75.473 
+$CAMERAPOSY = -1659.6946 
+$CAMERAPOSZ = 16.4699
+$CAMERATARGETX = -100.2727 
+$CAMERATARGETY = -1601.7543 
+$CAMERATARGETZ = 11.8023
+$PLAYERPUTATX = -104.4585 
+$PLAYERPUTATY = -1605.6365 
+$PLAYERPUTATZ = 9.2515
+$PLAYERPUTATA = 151.2989
+$HOUSEHASGARAGE = 0
+0084: $HOUSECOST = $HOUSE8_COST
+0570: $HOUSE8_BLIP = create_asset_radar_marker_with_icon 19 at $HOUSE8_X $HOUSE8_Y $HOUSE8_Z 
+018B: set_marker $HOUSE8_BLIP display 2 
+0542: add_property 16 to_property_own_stats 
+// 02FA: garage $655 change_to_type 26 
+$HOUSE8_BOUGHT = 1
+jump @HOUSBUY_fadeout
+
+:HOUSBUY_ishouse9
+if
+   $HOUSETOBUY == 9	// Starfish Mansion
+jf @HOUSBUY_nohouse
+$CAMERAPOSX = -543.1595 
+$CAMERAPOSY = -522.3664 
+$CAMERAPOSZ = 15.7457
+$CAMERATARGETX = -566.4523 
+$CAMERATARGETY = -550.1161 
+$CAMERATARGETZ = 12.5658
+$PLAYERPUTATX = -567.9755  
+$PLAYERPUTATY = -544.9659  
+$PLAYERPUTATZ = 10.4863
+$PLAYERPUTATA = 1.3221
+$HOUSEHASGARAGE = 0
+0084: $HOUSECOST = $HOUSE9_COST
+0570: $HOUSE9_BLIP = create_asset_radar_marker_with_icon 19 at $HOUSE9_X $HOUSE9_Y $HOUSE9_Z 
+018B: set_marker $HOUSE9_BLIP display 2 
+0542: add_property 17 to_property_own_stats 
+// 02FA: garage $655 change_to_type 26 
+$HOUSE9_BOUGHT = 1
 jump @HOUSBUY_fadeout
 
 :HOUSBUY_nohouse
@@ -317,8 +355,20 @@ jf @HOUSBUY_postfadehouse7
 :HOUSBUY_postfadehouse7
 if
    $HOUSETOBUY == 7	// Junkyard
-jf @HOUSBUY_postfadeincontinue
+jf @HOUSBUY_postfadehouse8
 01E3: text_1number_styled 'CSCRBUY' number $HOUSECOST time 5000 style 6  // City Scrap Shack purchased: $~1~
+
+:HOUSBUY_postfadehouse8
+if
+   $HOUSETOBUY == 8	// Lance's
+jf @HOUSBUY_postfadehouse9
+01E3: text_1number_styled 'OCDRBUY' number $HOUSECOST time 5000 style 6  // Ocean Drive Apartment purchased: $~1~
+
+:HOUSBUY_postfadehouse9
+if
+   $HOUSETOBUY == 9	// Casa Estrella
+jf @HOUSBUY_postfadeincontinue
+01E3: text_1number_styled 'CESTBUY' number $HOUSECOST time 5000 style 6  // Casa Estrella purchased: $~1~
 
 
 :HOUSBUY_postfadeincontinue

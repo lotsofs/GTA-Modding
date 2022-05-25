@@ -195,6 +195,12 @@ $HOUSE6_Z = 12.7
 $HOUSE7_X = -1247.045 // junkyard
 $HOUSE7_Y = 87.9088 
 $HOUSE7_Z = 11.4567
+$HOUSE8_X = -101.8582 // Lance's
+$HOUSE8_Y = -1601.2346  
+$HOUSE8_Z = 11.2756
+$HOUSE9_X = -569.638 // Casa Estrella
+$HOUSE9_Y = -548.3126 
+$HOUSE9_Z = 12.5658
 $HOUSE0_COST = 1000 // Skumole Shack Cost
 $HOUSE1_COST = 2500 // 3321 Vice Point Cost
 $HOUSE2_COST = 3000 // 1102 Washington Street Cost
@@ -203,6 +209,8 @@ $HOUSE4_COST = 14000 // Hyman Condo Cost
 $HOUSE5_COST = 8000 // El Swanko Casa Cost
 $HOUSE6_COST = 6000 // Links View Apt Cost
 $HOUSE7_COST = 2000 // Junkyard
+$HOUSE8_COST = 7500 // Lance's
+$HOUSE9_COST = 9000 // Casa Estrella
 0518: $HOUSE0_PICKUP = create_available_asset_pickup 'SKUM_L' at $HOUSE0_X $HOUSE0_Y $HOUSE0_Z price $HOUSE0_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
 0518: $HOUSE1_PICKUP = create_available_asset_pickup 'VCPT_L' at $HOUSE1_X $HOUSE1_Y $HOUSE1_Z price $HOUSE1_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
 0518: $HOUSE2_PICKUP = create_available_asset_pickup 'WASH_L' at $HOUSE2_X $HOUSE2_Y $HOUSE2_Z price $HOUSE2_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
@@ -211,6 +219,8 @@ $HOUSE7_COST = 2000 // Junkyard
 0518: $HOUSE5_PICKUP = create_available_asset_pickup 'NBMN_L' at $HOUSE5_X $HOUSE5_Y $HOUSE5_Z price $HOUSE5_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
 0518: $HOUSE6_PICKUP = create_available_asset_pickup 'LNKV_L' at $HOUSE6_X $HOUSE6_Y $HOUSE6_Z price $HOUSE6_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
 0518: $HOUSE7_PICKUP = create_available_asset_pickup 'CSCR_L' at $HOUSE7_X $HOUSE7_Y $HOUSE7_Z price $HOUSE7_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase City Scrap Shack for $~1~
+0518: $HOUSE8_PICKUP = create_available_asset_pickup 'OCDR_L' at $HOUSE8_X $HOUSE8_Y $HOUSE8_Z price $HOUSE8_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Drive Apartment for $~1~
+0518: $HOUSE9_PICKUP = create_available_asset_pickup 'CEST_L' at $HOUSE9_X $HOUSE9_Y $HOUSE9_Z price $HOUSE9_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Casa Estrella for $~1~
 
 // =========================== Assets: ===========================
 // coordinates for asset purchase markers

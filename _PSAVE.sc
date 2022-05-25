@@ -345,6 +345,90 @@ jump @PSAVES_finishsave
 
 :PSAVES_check7end
 // ----------------------------------------
+
+:PSAVES_checkhouse8destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse8pickup
+if
+  $HOUSE8_ACTIVE == 1 
+jf @PSAVES_check8end
+Pickup.Destroy($HOUSE8_SAVEPICKUP)
+$HOUSE8_ACTIVE = 0
+jump @PSAVES_check8end 
+
+:PSAVES_checkhouse8pickup
+if and
+if 
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Lance's
+	$HOUSE8_BOUGHT == 1
+jf @PSAVES_check8end
+if
+	$HOUSE8_ACTIVE == 0
+jf @PSAVES_checkhouse8save
+Pickup.Create($HOUSE8_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE8_X, $HOUSE8_Y, $HOUSE8_Z)
+$HOUSE8_ACTIVE = 1
+
+:PSAVES_checkhouse8save
+if 
+   Pickup.Picked_up($HOUSE8_SAVEPICKUP)
+jf @PSAVES_check8end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE8_SAVEPICKUP)
+Pickup.Create($HOUSE8_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE8_X, $HOUSE8_Y, $HOUSE8_Z)
+fade 1 1000 
+0395: clear_area 1 at -104.4585 -1605.6365 9.2515 range 1.0 
+0055: put_player $PLAYER_CHAR at -104.4585 -1605.6365 9.2515 
+0171: set_player $PLAYER_CHAR z_angle_to 151.2989 
+jump @PSAVES_finishsave
+
+:PSAVES_check8end
+// ----------------------------------------
+
+:PSAVES_checkhouse9destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse9pickup
+if
+  $HOUSE9_ACTIVE == 1 
+jf @PSAVES_check9end
+Pickup.Destroy($HOUSE9_SAVEPICKUP)
+$HOUSE9_ACTIVE = 0
+jump @PSAVES_check9end 
+
+:PSAVES_checkhouse9pickup
+if and
+if 
+0121:   player $PLAYER_CHAR in_zone 'STARI'  // Estrella
+	$HOUSE9_BOUGHT == 1
+jf @PSAVES_check9end
+if
+	$HOUSE9_ACTIVE == 0
+jf @PSAVES_checkhouse9save
+Pickup.Create($HOUSE9_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE9_X, $HOUSE9_Y, $HOUSE9_Z)
+$HOUSE9_ACTIVE = 1
+
+:PSAVES_checkhouse9save
+if 
+   Pickup.Picked_up($HOUSE9_SAVEPICKUP)
+jf @PSAVES_check9end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE9_SAVEPICKUP)
+Pickup.Create($HOUSE9_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE9_X, $HOUSE9_Y, $HOUSE9_Z)
+fade 1 1000 
+0395: clear_area 1 at -567.9755 -544.9659 10.4863 range 1.0 
+0055: put_player $PLAYER_CHAR at -567.9755 -544.9659 10.4863 
+0171: set_player $PLAYER_CHAR z_angle_to 1.3221 
+jump @PSAVES_finishsave
+
+:PSAVES_check9end
+// ----------------------------------------
 jump @PSAVES_continue
 
 :PSAVES_finishsave

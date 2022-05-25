@@ -4,7 +4,7 @@ script_name 'HOUSEBY'
 :HOUSEBY_start
 wait $DEFAULT_WAIT_TIME
 if
-   $HOUSES_BOUGHT > 6
+   $HOUSES_BOUGHT > 7
 jf @HOUSEBY_checks
 terminate_this_script
 
@@ -20,7 +20,7 @@ if and
    Pickup.Picked_up($HOUSE0_PICKUP)
    $HOUSE0_BOUGHT == 0
 jf @HOUSEBY_1
-$HOUSETOBUY = 0
+$HOUSETOBUY = 0   // Skumole Shack
 start_mission 50  // House Buy
 
 :HOUSEBY_1
@@ -28,7 +28,7 @@ if and
    Pickup.Picked_up($HOUSE1_PICKUP)
    $HOUSE1_BOUGHT == 0
 jf @HOUSEBY_2
-$HOUSETOBUY = 1
+$HOUSETOBUY = 1   // Vice Point
 start_mission 50  // House Buy
 
 :HOUSEBY_2
@@ -36,7 +36,7 @@ if and
    Pickup.Picked_up($HOUSE2_PICKUP)
    $HOUSE2_BOUGHT == 0
 jf @HOUSEBY_3
-$HOUSETOBUY = 2
+$HOUSETOBUY = 2   // 1102 Washington Street
 start_mission 50  // House Buy
 
 :HOUSEBY_3
@@ -44,7 +44,7 @@ if and
    Pickup.Picked_up($HOUSE3_PICKUP)
    $HOUSE3_BOUGHT == 0
 jf @HOUSEBY_4
-$HOUSETOBUY = 3
+$HOUSETOBUY = 3   // Ocean Heights Apartment
 start_mission 50  // House Buy
 
 :HOUSEBY_4
@@ -52,7 +52,7 @@ if and
    Pickup.Picked_up($HOUSE4_PICKUP)
    $HOUSE4_BOUGHT == 0
 jf @HOUSEBY_5
-$HOUSETOBUY = 4
+$HOUSETOBUY = 4   // Hyman Condo
 start_mission 50  // House Buy
 
 :HOUSEBY_5
@@ -60,7 +60,7 @@ if and
    Pickup.Picked_up($HOUSE5_PICKUP)
    $HOUSE5_BOUGHT == 0
 jf @HOUSEBY_6
-$HOUSETOBUY = 5
+$HOUSETOBUY = 5   // El Swanko Casa
 start_mission 50  // House Buy
 
 :HOUSEBY_6
@@ -68,7 +68,7 @@ if and
    Pickup.Picked_up($HOUSE6_PICKUP)
    $HOUSE6_BOUGHT == 0
 jf @HOUSEBY_7
-$HOUSETOBUY = 6
+$HOUSETOBUY = 6   // Links View
 start_mission 50  // House Buy
 
 :HOUSEBY_7
@@ -76,7 +76,7 @@ if and
    Pickup.Picked_up($HOUSE7_PICKUP)
    $HOUSE7_BOUGHT == 0
 jf @HOUSEBY_continue
-$HOUSETOBUY = 7
+$HOUSETOBUY = 7   // Junkyard
 start_mission 50  // House Buy
 
 :HOUSEBY_continue

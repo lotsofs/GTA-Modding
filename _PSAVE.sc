@@ -1,3 +1,369 @@
+// ==================== PSAVES =========================
+
+:PSAVES
+script_name 'PSAVES'
+
+:PSAVES_genericchecks
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_continue 
+if
+	Player.Controllable($PLAYER_CHAR)
+jf @PSAVES_continue
+// ----------------------------------------
+
+:PSAVES_checkhouse0destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse0pickup
+if
+  $HOUSE0_ACTIVE == 1 
+jf @PSAVES_check0end
+Pickup.Destroy($HOUSE0_SAVEPICKUP)
+$HOUSE0_ACTIVE = 0
+jump @PSAVES_check0end 
+
+:PSAVES_checkhouse0pickup
+if and
+	0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Skumole Shack
+	$HOUSE0_BOUGHT == 1
+jf @PSAVES_check0end
+if
+	$HOUSE0_ACTIVE == 0
+jf @PSAVES_checkhouse0save
+Pickup.Create($HOUSE0_SAVEPICKUP, #PICKUPSAVE, 3, -562.8, 699.7, 20.6)
+$HOUSE0_ACTIVE = 1
+
+:PSAVES_checkhouse0save
+if 
+   Pickup.Picked_up($HOUSE0_SAVEPICKUP)
+jf @PSAVES_check0end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE0_SAVEPICKUP)
+Pickup.Create($HOUSE0_SAVEPICKUP, #PICKUPSAVE, 3, -562.8, 699.7, 20.6)
+fade 1 1000 
+0395: clear_area 1 at -559.9 705.4 19.8 range 1.0 
+0055: put_player $PLAYER_CHAR at -559.9 705.4 19.8 
+0171: set_player $PLAYER_CHAR z_angle_to 243.0 
+jump @PSAVES_finishsave
+
+:PSAVES_check0end
+// ----------------------------------------
+
+:PSAVES_checkhouse1destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse1pickup
+if
+  $HOUSE1_ACTIVE == 1 
+jf @PSAVES_check1end
+Pickup.Destroy($HOUSE1_SAVEPICKUP)
+$HOUSE1_ACTIVE = 0
+jump @PSAVES_check1end 
+
+:PSAVES_checkhouse1pickup
+if and
+	0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // 3321 Vice Point
+	$HOUSE1_BOUGHT == 1
+jf @PSAVES_check1end
+if
+	$HOUSE1_ACTIVE == 0
+jf @PSAVES_checkhouse1save
+Pickup.Create($HOUSE1_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE1_X, $HOUSE1_Y, $HOUSE1_Z)
+$HOUSE1_ACTIVE = 1
+
+:PSAVES_checkhouse1save
+if 
+   Pickup.Picked_up($HOUSE1_SAVEPICKUP)
+jf @PSAVES_check1end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE1_SAVEPICKUP)
+Pickup.Create($HOUSE1_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE1_X, $HOUSE1_Y, $HOUSE1_Z)
+fade 1 1000 
+0395: clear_area 1 at 529.6626 1272.155 16.822 range 1.0 
+0055: put_player $PLAYER_CHAR at 529.6626 1272.155 16.822 
+0171: set_player $PLAYER_CHAR z_angle_to 131.5277 
+jump @PSAVES_finishsave
+
+:PSAVES_check1end
+// ----------------------------------------
+
+:PSAVES_checkhouse2destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse2pickup
+if
+  $HOUSE2_ACTIVE == 1 
+jf @PSAVES_check2end
+Pickup.Destroy($HOUSE2_SAVEPICKUP)
+$HOUSE2_ACTIVE = 0
+jump @PSAVES_check2end 
+
+:PSAVES_checkhouse2pickup
+if and
+	0121:   player $PLAYER_CHAR in_zone 'BEACH2'  // 1102 Washington Street
+	$HOUSE2_BOUGHT == 1
+jf @PSAVES_check2end
+if
+	$HOUSE2_ACTIVE == 0
+jf @PSAVES_checkhouse2save
+Pickup.Create($HOUSE2_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE2_X, $HOUSE2_Y, $HOUSE2_Z)
+$HOUSE2_ACTIVE = 1
+
+:PSAVES_checkhouse2save
+if 
+   Pickup.Picked_up($HOUSE2_SAVEPICKUP)
+jf @PSAVES_check2end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE2_SAVEPICKUP)
+Pickup.Create($HOUSE2_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE2_X, $HOUSE2_Y, $HOUSE2_Z)
+fade 1 1000 
+0395: clear_area 1 at 90.781 -806.1213 10.3349 range 1.0 
+0055: put_player $PLAYER_CHAR at 90.781 -806.1213 10.3349 
+0171: set_player $PLAYER_CHAR z_angle_to 238.8605 
+jump @PSAVES_finishsave
+
+:PSAVES_check2end
+// ----------------------------------------
+
+:PSAVES_checkhouse3destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse3pickup
+if
+  $HOUSE3_ACTIVE == 1 
+jf @PSAVES_check3end
+Pickup.Destroy($HOUSE3_SAVEPICKUP)
+$HOUSE3_ACTIVE = 0
+jump @PSAVES_check3end 
+
+:PSAVES_checkhouse3pickup
+if and
+if 
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Heights
+	$HOUSE3_BOUGHT == 1
+jf @PSAVES_check3end
+if
+	$HOUSE3_ACTIVE == 0
+jf @PSAVES_checkhouse3save
+Pickup.Create($HOUSE3_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE3_X, $HOUSE3_Y, $HOUSE3_Z)
+$HOUSE3_ACTIVE = 1
+
+:PSAVES_checkhouse3save
+if 
+   Pickup.Picked_up($HOUSE3_SAVEPICKUP)
+jf @PSAVES_check3end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE3_SAVEPICKUP)
+Pickup.Create($HOUSE3_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE3_X, $HOUSE3_Y, $HOUSE3_Z)
+fade 1 1000 
+0395: clear_area 1 at 14.4571 -1498.594 12.1974 range 1.0 
+0055: put_player $PLAYER_CHAR at 14.4571 -1498.594 12.1974 
+0171: set_player $PLAYER_CHAR z_angle_to 353.8286 
+jump @PSAVES_finishsave
+
+:PSAVES_check3end
+// ----------------------------------------
+
+:PSAVES_checkhouse4destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse4pickup
+if
+  $HOUSE4_ACTIVE == 1 
+jf @PSAVES_check4end
+Pickup.Destroy($HOUSE4_SAVEPICKUP)
+$HOUSE4_ACTIVE = 0
+jump @PSAVES_check4end 
+
+:PSAVES_checkhouse4pickup
+if and
+if 
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Hyman Condo
+	$HOUSE4_BOUGHT == 1
+jf @PSAVES_check4end
+if
+	$HOUSE4_ACTIVE == 0
+jf @PSAVES_checkhouse4save
+Pickup.Create($HOUSE4_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE4_X, $HOUSE4_Y, $HOUSE4_Z)
+$HOUSE4_ACTIVE = 1
+
+:PSAVES_checkhouse4save
+if 
+   Pickup.Picked_up($HOUSE4_SAVEPICKUP)
+jf @PSAVES_check4end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE4_SAVEPICKUP)
+Pickup.Create($HOUSE4_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE4_X, $HOUSE4_Y, $HOUSE4_Z)
+fade 1 1000 
+0395: clear_area 1 at -833.811 1304.07 10.5131 range 1.0 
+0055: put_player $PLAYER_CHAR at -833.811 1304.07 10.5131 
+0171: set_player $PLAYER_CHAR z_angle_to 200.4458 
+jump @PSAVES_finishsave
+
+:PSAVES_check4end
+// ----------------------------------------
+
+:PSAVES_checkhouse5destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse5pickup
+if
+  $HOUSE5_ACTIVE == 1 
+jf @PSAVES_check5end
+Pickup.Destroy($HOUSE5_SAVEPICKUP)
+$HOUSE5_ACTIVE = 0
+jump @PSAVES_check5end 
+
+:PSAVES_checkhouse5pickup
+if and
+if 
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // El Swanko Casa
+	$HOUSE5_BOUGHT == 1
+jf @PSAVES_check5end
+if
+	$HOUSE5_ACTIVE == 0
+jf @PSAVES_checkhouse5save
+Pickup.Create($HOUSE5_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE5_X, $HOUSE5_Y, $HOUSE5_Z)
+$HOUSE5_ACTIVE = 1
+
+:PSAVES_checkhouse5save
+if 
+   Pickup.Picked_up($HOUSE5_SAVEPICKUP)
+jf @PSAVES_check5end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE5_SAVEPICKUP)
+Pickup.Create($HOUSE5_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE5_X, $HOUSE5_Y, $HOUSE5_Z)
+fade 1 1000 
+0395: clear_area 1 at 428.4 609.1 12.0 range 1.0 
+0055: put_player $PLAYER_CHAR at 428.4 609.1 12.0 
+0171: set_player $PLAYER_CHAR z_angle_to 0.0 
+jump @PSAVES_finishsave
+
+:PSAVES_check5end
+// ----------------------------------------
+
+:PSAVES_checkhouse6destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse6pickup
+if
+  $HOUSE6_ACTIVE == 1 
+jf @PSAVES_check6end
+Pickup.Destroy($HOUSE6_SAVEPICKUP)
+$HOUSE6_ACTIVE = 0
+jump @PSAVES_check6end 
+
+:PSAVES_checkhouse6pickup
+if and
+if 
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Links View
+	$HOUSE6_BOUGHT == 1
+jf @PSAVES_check6end
+if
+	$HOUSE6_ACTIVE == 0
+jf @PSAVES_checkhouse6save
+Pickup.Create($HOUSE6_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE6_X, $HOUSE6_Y, $HOUSE6_Z)
+$HOUSE6_ACTIVE = 1
+
+:PSAVES_checkhouse6save
+if 
+   Pickup.Picked_up($HOUSE6_SAVEPICKUP)
+jf @PSAVES_check6end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE6_SAVEPICKUP)
+Pickup.Create($HOUSE6_SAVEPICKUP, #PICKUPSAVE, 3, $HOUSE6_X, $HOUSE6_Y, $HOUSE6_Z)
+fade 1 1000 
+0395: clear_area 1 at 306.5728 376.2928 12.1856 range 1.0 
+0055: put_player $PLAYER_CHAR at 306.5728 376.2928 12.1856 
+0171: set_player $PLAYER_CHAR z_angle_to 276.3156 
+jump @PSAVES_finishsave
+
+:PSAVES_check6end
+// ----------------------------------------
+
+:PSAVES_checkhouse7destroy
+if
+  $ONMISSION == 1
+jf @PSAVES_checkhouse7pickup
+if
+  $HOUSE7_ACTIVE == 1 
+jf @PSAVES_check7end
+Pickup.Destroy($HOUSE7_SAVEPICKUP)
+$HOUSE7_ACTIVE = 0
+jump @PSAVES_check7end 
+
+:PSAVES_checkhouse7pickup
+if and
+if 
+0121:   player $PLAYER_CHAR in_zone 'JUNKY'  // Junk Yard
+	$HOUSE7_BOUGHT == 1
+jf @PSAVES_check7end
+if
+	$HOUSE7_ACTIVE == 0
+jf @PSAVES_checkhouse7save
+Pickup.Create($HOUSE7_SAVEPICKUP, #PICKUPSAVE, 3, -1242.8242, 82.145, 11.88)
+$HOUSE7_ACTIVE = 1
+
+:PSAVES_checkhouse7save
+if 
+   Pickup.Picked_up($HOUSE7_SAVEPICKUP)
+jf @PSAVES_check7end
+HELP_4118() // show save screen
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVES_finishsave
+Pickup.Destroy($HOUSE7_SAVEPICKUP)
+Pickup.Create($HOUSE7_SAVEPICKUP, #PICKUPSAVE, 3, -1242.8242, 82.145, 11.88)
+fade 1 1000 
+0395: clear_area 1 at -1249.6212 86.3196 10.4558 range 1.0 
+0055: put_player $PLAYER_CHAR at -1249.6212 86.3196 10.4558 
+0171: set_player $PLAYER_CHAR z_angle_to 119.799 
+jump @PSAVES_finishsave
+
+:PSAVES_check7end
+// ----------------------------------------
+jump @PSAVES_continue
+
+:PSAVES_finishsave
+HELP_4210() // finish save (restore camera, control, om0)
+
+:PSAVES_continue
+jump @PSAVES_genericchecks
+
+
+
+
+
+
+
+
+
+
+
+
 :PSAVE1
 script_name 'PSAVE1' 
 
@@ -577,384 +943,3 @@ $73 = 0 // $ = int
 
 :PSAVE10_311
 jump @PSAVE10_10 
-
-:SAVE1
-script_name 'SAVE1' 
-
-:SAVE1_10
-wait 250 
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE1_299 
-if 
-0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
-jf @SAVE1_299 
-if 
-   Player.Controllable($PLAYER_CHAR)
-jf @SAVE1_299 
-if 
-  $ONMISSION == 0 // $ == int 
-jf @SAVE1_269 
-if 
-  $36 == 0 // $ == int 
-jf @SAVE1_132 
-Pickup.Create($662, #PICKUPSAVE, 3, $573, $574, $575)
-$36 = 1 // $ = int 
-
-:SAVE1_132
-if 
-   Pickup.Picked_up($662)
-jf @SAVE1_262 
-HELP_4118()
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE1_255 
-Pickup.Destroy($662)
-Pickup.Create($662, #PICKUPSAVE, 3, $573, $574, $575)
-fade 1 1000 
-0395: clear_area 1 at 428.4 609.1 12.0 range 1.0 
-0055: put_player $PLAYER_CHAR at 428.4 609.1 12.0 
-0171: set_player $PLAYER_CHAR z_angle_to 0.0 
-
-:SAVE1_255
-HELP_4210()
-
-:SAVE1_262
-jump @SAVE1_299 
-
-:SAVE1_269
-if 
-  $36 == 1 // $ == int 
-jf @SAVE1_299 
-Pickup.Destroy($662)
-$36 = 0 // $ = int 
-
-:SAVE1_299
-jump @SAVE1_10 
-
-:SAVE2
-script_name 'SAVE2' 
-
-:SAVE2_10
-wait 250 
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE2_299 
-if 
-0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
-jf @SAVE2_299 
-if 
-   Player.Controllable($PLAYER_CHAR)
-jf @SAVE2_299 
-if 
-  $ONMISSION == 0 // $ == int 
-jf @SAVE2_269 
-if 
-  $22 == 0 // $ == int 
-jf @SAVE2_132 
-Pickup.Create($654, #PICKUPSAVE, 3, $585, $586, $587)
-$22 = 1 // $ = int 
-
-:SAVE2_132
-if 
-   Pickup.Picked_up($654)
-jf @SAVE2_262 
-HELP_4118()
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE2_255 
-Pickup.Destroy($654)
-Pickup.Create($654, #PICKUPSAVE, 3, $585, $586, $587)
-fade 1 1000 
-0395: clear_area 1 at 306.5728 376.2928 12.1856 range 1.0 
-0055: put_player $PLAYER_CHAR at 306.5728 376.2928 12.1856 
-0171: set_player $PLAYER_CHAR z_angle_to 276.3156 
-
-:SAVE2_255
-HELP_4210()
-
-:SAVE2_262
-jump @SAVE2_299 
-
-:SAVE2_269
-if 
-  $22 == 1 // $ == int 
-jf @SAVE2_299 
-Pickup.Destroy($654)
-$22 = 0 // $ = int 
-
-:SAVE2_299
-jump @SAVE2_10 
-
-:SAVE3
-script_name 'SAVE3' 
-
-:SAVE3_10
-wait 250 
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE3_299 
-if 
-0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
-jf @SAVE3_299 
-if 
-   Player.Controllable($PLAYER_CHAR)
-jf @SAVE3_299 
-if 
-  $ONMISSION == 0 // $ == int 
-jf @SAVE3_269 
-if 
-  $15 == 0 // $ == int 
-jf @SAVE3_132 
-Pickup.Create($666, #PICKUPSAVE, 3, $588, $589, $590)
-$15 = 1 // $ = int 
-
-:SAVE3_132
-if 
-   Pickup.Picked_up($666)
-jf @SAVE3_262 
-HELP_4118()
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE3_255 
-Pickup.Destroy($666)
-Pickup.Create($666, #PICKUPSAVE, 3, $588, $589, $590)
-fade 1 1000 
-0395: clear_area 1 at -833.811 1304.07 10.5131 range 1.0 
-0055: put_player $PLAYER_CHAR at -833.811 1304.07 10.5131 
-0171: set_player $PLAYER_CHAR z_angle_to 200.4458 
-
-:SAVE3_255
-HELP_4210()
-
-:SAVE3_262
-jump @SAVE3_299 
-
-:SAVE3_269
-if 
-  $15 == 1 // $ == int 
-jf @SAVE3_299 
-Pickup.Destroy($666)
-$15 = 0 // $ = int 
-
-:SAVE3_299
-jump @SAVE3_10 
-
-:SAVE4
-script_name 'SAVE4' 
-
-:SAVE4_10
-wait 250 
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE4_299 
-if 
-0121:   player $PLAYER_CHAR in_zone 'BEACH2'  // Washington Beach
-jf @SAVE4_299 
-if 
-   Player.Controllable($PLAYER_CHAR)
-jf @SAVE4_299 
-if 
-  $ONMISSION == 0 // $ == int 
-jf @SAVE4_269 
-if 
-  $32 == 0 // $ == int 
-jf @SAVE4_132 
-Pickup.Create($651, #PICKUPSAVE, 3, $594, $595, $596)
-$32 = 1 // $ = int 
-
-:SAVE4_132
-if 
-   Pickup.Picked_up($651)
-jf @SAVE4_262 
-HELP_4118()
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE4_255 
-Pickup.Destroy($651)
-Pickup.Create($651, #PICKUPSAVE, 3, $594, $595, $596)
-fade 1 1000 
-0395: clear_area 1 at 90.781 -806.1213 10.3349 range 1.0 
-0055: put_player $PLAYER_CHAR at 90.781 -806.1213 10.3349 
-0171: set_player $PLAYER_CHAR z_angle_to 238.8605 
-
-:SAVE4_255
-HELP_4210()
-
-:SAVE4_262
-jump @SAVE4_299 
-
-:SAVE4_269
-if 
-  $32 == 1 // $ == int 
-jf @SAVE4_299 
-Pickup.Destroy($651)
-$32 = 0 // $ = int 
-
-:SAVE4_299
-jump @SAVE4_10 
-
-:SAVE5
-script_name 'SAVE5' 
-
-:SAVE5_10
-wait 250 
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE5_299 
-if 
-0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
-jf @SAVE5_299 
-if 
-   Player.Controllable($PLAYER_CHAR)
-jf @SAVE5_299 
-if 
-  $ONMISSION == 0 // $ == int 
-jf @SAVE5_269 
-if 
-  $16 == 0 // $ == int 
-jf @SAVE5_132 
-Pickup.Create($658, #PICKUPSAVE, 3, $591, $592, $593)
-$16 = 1 // $ = int 
-
-:SAVE5_132
-if 
-   Pickup.Picked_up($658)
-jf @SAVE5_262 
-HELP_4118()
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE5_255 
-Pickup.Destroy($658)
-Pickup.Create($658, #PICKUPSAVE, 3, $591, $592, $593)
-fade 1 1000 
-0395: clear_area 1 at 14.4571 -1498.594 12.1974 range 1.0 
-0055: put_player $PLAYER_CHAR at 14.4571 -1498.594 12.1974 
-0171: set_player $PLAYER_CHAR z_angle_to 353.8286 
-
-:SAVE5_255
-HELP_4210()
-
-:SAVE5_262
-jump @SAVE5_299 
-
-:SAVE5_269
-if 
-  $16 == 1 // $ == int 
-jf @SAVE5_299 
-Pickup.Destroy($658)
-$16 = 0 // $ = int 
-
-:SAVE5_299
-jump @SAVE5_10 
-
-:SAVE6
-script_name 'SAVE6' 
-
-:SAVE6_10
-wait 250 
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE6_299 
-if 
-0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
-jf @SAVE6_299 
-if 
-   Player.Controllable($PLAYER_CHAR)
-jf @SAVE6_299 
-if 
-  $ONMISSION == 0 // $ == int 
-jf @SAVE6_269 
-if 
-  $69 == 0 // $ == int 
-jf @SAVE6_132 
-Pickup.Create($648, #PICKUPSAVE, 3, $597, $598, $599)
-$69 = 1 // $ = int 
-
-:SAVE6_132
-if 
-   Pickup.Picked_up($648)
-jf @SAVE6_262 
-HELP_4118()
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE6_255 
-Pickup.Destroy($648)
-Pickup.Create($648, #PICKUPSAVE, 3, $597, $598, $599)
-fade 1 1000 
-0395: clear_area 1 at 529.6626 1272.155 16.822 range 1.0 
-0055: put_player $PLAYER_CHAR at 529.6626 1272.155 16.822 
-0171: set_player $PLAYER_CHAR z_angle_to 131.5277 
-
-:SAVE6_255
-HELP_4210()
-
-:SAVE6_262
-jump @SAVE6_299 
-
-:SAVE6_269
-if 
-  $69 == 1 // $ == int 
-jf @SAVE6_299 
-Pickup.Destroy($648)
-$69 = 0 // $ = int 
-
-:SAVE6_299
-jump @SAVE6_10 
-
-:SAVE7
-script_name 'SAVE7' 
-
-:SAVE7_10
-wait 250 
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE7_327 
-if 
-0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
-jf @SAVE7_327 
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE7_327 
-if 
-   Player.Controllable($PLAYER_CHAR)
-jf @SAVE7_327 
-if 
-  $ONMISSION == 0 // $ == int 
-jf @SAVE7_297 
-if 
-  $60 == 0 // $ == int 
-jf @SAVE7_154 
-Pickup.Create($645, #PICKUPSAVE, 3, -562.8, 699.7, 20.6)
-$60 = 1 // $ = int 
-
-:SAVE7_154
-if 
-   Pickup.Picked_up($645)
-jf @SAVE7_290 
-HELP_4118()
-if 
-   Player.Defined($PLAYER_CHAR)
-jf @SAVE7_283 
-Pickup.Destroy($645)
-Pickup.Create($645, #PICKUPSAVE, 3, -562.8, 699.7, 20.6)
-fade 1 1000 
-0395: clear_area 1 at -559.9 705.4 19.8 range 1.0 
-0055: put_player $PLAYER_CHAR at -559.9 705.4 19.8 
-0171: set_player $PLAYER_CHAR z_angle_to 243.0 
-
-:SAVE7_283
-HELP_4210()
-
-:SAVE7_290
-jump @SAVE7_327 
-
-:SAVE7_297
-if 
-  $60 == 1 // $ == int 
-jf @SAVE7_327 
-Pickup.Destroy($645)
-$60 = 0 // $ = int 
-
-:SAVE7_327
-jump @SAVE7_10 

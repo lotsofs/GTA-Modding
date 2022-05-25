@@ -360,7 +360,7 @@ start_new_script @RCHELY1
 start_new_script @RC_RACE 
 start_new_script @RC_PLNE 
 start_new_script @MULTI 
-start_new_script @PSAVE1 
+start_new_script @PSAVES 
 start_new_script @HELP 
 start_new_script @HELI1 
 start_new_script @HELI2 
@@ -464,7 +464,7 @@ $1531 = -1 // $ = int
 
 :MAIN_continue
 // Cheats for testing
-Player.Money($PLAYER_CHAR) += 100
+Player.Money($PLAYER_CHAR) += 1000
 jump @MAIN_checkavery3 
 
 //-------------ENDMAIN---------------

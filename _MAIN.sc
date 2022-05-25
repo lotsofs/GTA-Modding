@@ -210,7 +210,7 @@ $HOUSE7_COST = 2000 // Junkyard
 0518: $HOUSE4_PICKUP = create_available_asset_pickup 'HYCO_L' at $HOUSE4_X $HOUSE4_Y $HOUSE4_Z price $HOUSE4_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Hyman Condo for $~1~
 0518: $HOUSE5_PICKUP = create_available_asset_pickup 'NBMN_L' at $HOUSE5_X $HOUSE5_Y $HOUSE5_Z price $HOUSE5_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
 0518: $HOUSE6_PICKUP = create_available_asset_pickup 'LNKV_L' at $HOUSE6_X $HOUSE6_Y $HOUSE6_Z price $HOUSE6_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
-0518: $HOUSE7_PICKUP = create_available_asset_pickup 'SKUM_L' at $HOUSE7_X $HOUSE7_Y $HOUSE7_Z price $HOUSE7_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
+0518: $HOUSE7_PICKUP = create_available_asset_pickup 'CSCR_L' at $HOUSE7_X $HOUSE7_Y $HOUSE7_Z price $HOUSE7_COST  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase City Scrap Shack for $~1~
 
 // =========================== Assets: ===========================
 // coordinates for asset purchase markers

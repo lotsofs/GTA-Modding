@@ -318,7 +318,7 @@ jf @HOUSBUY_postfadehouse7
 if
    $HOUSETOBUY == 7	// Junkyard
 jf @HOUSBUY_postfadeincontinue
-01E3: text_1number_styled 'SKUMBUY' number $HOUSECOST time 5000 style 6  // Links View Apartment purchased: $~1~
+01E3: text_1number_styled 'CSCRBUY' number $HOUSECOST time 5000 style 6  // City Scrap Shack purchased: $~1~
 
 
 :HOUSBUY_postfadeincontinue

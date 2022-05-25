@@ -219,9 +219,9 @@ if
    $HOUSETOBUY == 7	// Junkyard
 jf @HOUSBUY_nohouse
 $CAMERAPOSX = -1290.5977 
-$CAMERAPOSY = 86.6051 
+$CAMERAPOSY = 96.6051 
 $CAMERAPOSZ = 31.3012
-$CAMERATARGETX = -1263.4088 
+$CAMERATARGETX = -1253.4088 
 $CAMERATARGETY = 84.0854 
 $CAMERATARGETZ = 11.88
 $PLAYERPUTATX = -1249.6212 
@@ -232,7 +232,7 @@ $HOUSEHASGARAGE = 0
 0084: $HOUSECOST = $HOUSE7_COST
 0570: $HOUSE7_BLIP = create_asset_radar_marker_with_icon 19 at $HOUSE7_X $HOUSE7_Y $HOUSE7_Z 
 018B: set_marker $HOUSE7_BLIP display 2 
-// 0542: add_property 9 to_property_own_stats 
+0542: add_property 15 to_property_own_stats 
 // 02FA: garage $655 change_to_type 26 
 $HOUSE7_BOUGHT = 1
 // start_new_script @SAVE7 
